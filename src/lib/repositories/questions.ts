@@ -11,6 +11,12 @@ export interface DbQuestionRow {
   explanation_en: string | null;
   explanation_vi: string | null;
   set_title: string | null;
+  part_number?: number;
+  question_text?: string | null;
+  passage_text?: string | null;
+  passage_vi?: string | null;
+  passage_title?: string | null;
+  passage_type?: string | null;
   mastery_level?: number;
   times_wrong?: number;
 }
@@ -58,6 +64,12 @@ function rowToQuestion(
     explanation: row.explanation_en ?? "",
     explanationVi: row.explanation_vi ?? undefined,
     vocabulary,
+    partNumber: row.part_number ?? 5,
+    questionText: row.question_text ?? undefined,
+    passageText: row.passage_text ?? undefined,
+    passageVi: row.passage_vi ?? undefined,
+    passageTitle: row.passage_title ?? undefined,
+    passageType: row.passage_type ?? undefined,
   };
 }
 
@@ -69,9 +81,12 @@ export async function loadQuestionDetails(
 
   const qRes = await client.query<DbQuestionRow>(
     `SELECT q.id AS question_id, q.exercise_set_id, q.sentence, q.correct_index,
-            q.category, q.topic, q.explanation_en, q.explanation_vi, es.title AS set_title
+            q.category, q.topic, q.explanation_en, q.explanation_vi, es.title AS set_title,
+            q.part_number, q.question_text,
+            p.passage_text, p.passage_vi, p.title AS passage_title, p.passage_type
      FROM questions q
      JOIN exercise_sets es ON es.id = q.exercise_set_id
+     LEFT JOIN passages p ON p.id = q.passage_id
      WHERE q.id = ANY($1::uuid[])
      ORDER BY array_position($1::uuid[], q.id)`,
     [questionIds]
@@ -223,12 +238,61 @@ export async function getRandomQuestionIds(
      FROM questions q
      JOIN exercise_sets es ON es.id = q.exercise_set_id
      WHERE q.is_active = TRUE
+       AND q.part_number = 5
        AND (es.user_id = $1 OR es.user_id IS NULL)
      ORDER BY RANDOM()
      LIMIT $2`,
     [userId, limit]
   );
   return res.rows.map((r) => r.id);
+}
+
+/**
+ * Lấy câu hỏi theo Part. Part 5: ngẫu nhiên. Part 6/7: giữ nguyên thứ tự đoạn văn
+ * (các câu cùng một đoạn nằm liền nhau theo đúng số thứ tự).
+ */
+export async function getQuestionIdsByPart(
+  client: PoolClient,
+  userId: string,
+  part: number,
+  limit = 60
+): Promise<string[]> {
+  const order =
+    part === 5
+      ? "ORDER BY RANDOM()"
+      : "ORDER BY p.sort_order NULLS FIRST, q.sort_order";
+
+  const res = await client.query<{ id: string }>(
+    `SELECT q.id
+     FROM questions q
+     JOIN exercise_sets es ON es.id = q.exercise_set_id
+     LEFT JOIN passages p ON p.id = q.passage_id
+     WHERE q.is_active = TRUE
+       AND q.part_number = $2
+       AND (es.user_id = $1 OR es.user_id IS NULL)
+     ${order}
+     LIMIT $3`,
+    [userId, part, limit]
+  );
+  return res.rows.map((r) => r.id);
+}
+
+export async function countQuestionsByPart(
+  client: PoolClient,
+  userId: string
+): Promise<Record<number, number>> {
+  const res = await client.query<{ part_number: number; n: string }>(
+    `SELECT q.part_number, COUNT(*)::text AS n
+     FROM questions q
+     JOIN exercise_sets es ON es.id = q.exercise_set_id
+     WHERE q.is_active = TRUE
+       AND (es.user_id = $1 OR es.user_id IS NULL)
+     GROUP BY q.part_number`,
+    [userId]
+  );
+  const out: Record<number, number> = {};
+  for (const r of res.rows) out[Number(r.part_number)] = parseInt(r.n, 10);
+  return out;
 }
 
 export async function countUserQuestions(
@@ -240,6 +304,7 @@ export async function countUserQuestions(
      FROM questions q
      JOIN exercise_sets es ON es.id = q.exercise_set_id
      WHERE q.is_active = TRUE
+       AND q.part_number = 5
        AND (es.user_id = $1 OR es.user_id IS NULL)`,
     [userId]
   );

@@ -96,6 +96,8 @@ try {
 
   runSql(dbName, "database\\001_schema.sql");
   runSql(dbName, "database\\003_constraints.sql");
+  runSql(dbName, "database\\004_parts_6_7.sql");
+  runSql(dbName, "database\\005_saved_words.sql");
   runSql(dbName, "database\\002_seed.sql");
 
   console.log("\nSetup HOÀN TẤT! Database learn_toeic sẵn sàng.");

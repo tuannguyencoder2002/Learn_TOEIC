@@ -9,12 +9,19 @@ import { PRACTICE_SESSION, clampPracticeCount } from "@/lib/practice-config";
 import { SEED_QUIZ } from "@/lib/seed-questions";
 import {
   CATEGORY_LABELS,
+  PART5_CATEGORIES,
   STORAGE_KEYS,
   type CursorModel,
   type GenerateQuizRequest,
   type QuizSet,
   type ToeicQuestion,
 } from "@/lib/types";
+
+const PART_INFO = [
+  { part: 5, label: "Part 5", desc: "Hoàn thành câu (Incomplete Sentences)" },
+  { part: 6, label: "Part 6", desc: "Điền đoạn văn (Text Completion)" },
+  { part: 7, label: "Part 7", desc: "Đọc hiểu (Reading Comprehension)" },
+] as const;
 
 function sourceLabel(source: QuizSet["source"]) {
   switch (source) {
@@ -46,6 +53,8 @@ function PracticeContent() {
   const [loadingMarathon, setLoadingMarathon] = useState(false);
   const [marathonCount, setMarathonCount] = useState(PRACTICE_SESSION.default);
   const [error, setError] = useState<string | null>(null);
+  const [partCounts, setPartCounts] = useState<Record<number, number>>({});
+  const [loadingPart, setLoadingPart] = useState<number | null>(null);
 
   const [genForm, setGenForm] = useState<GenerateQuizRequest>({
     count: PRACTICE_SESSION.default,    category: "word_form",
@@ -78,6 +87,15 @@ function PracticeContent() {
       }
     }
   }, [loaded, searchParams]);
+
+  useEffect(() => {
+    fetch("/api/practice?action=counts")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.counts) setPartCounts(data.counts);
+      })
+      .catch(() => undefined);
+  }, []);
 
   useEffect(() => {
     if (!loaded || !settings.apiKey) return;
@@ -217,6 +235,43 @@ function PracticeContent() {
     }
   };
 
+  const handleBank = async (part: number) => {
+    setLoadingPart(part);
+    setError(null);
+
+    try {
+      const res = await fetch(`/api/practice?action=bank&part=${part}&limit=60`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error);
+
+      const dbQuestions = (data.questions ?? []) as ToeicQuestion[];
+      if (dbQuestions.length === 0) {
+        setError(
+          `Chưa có câu nào cho Part ${part} trong kho. Chạy lại scripts/seed-content.js để nạp đề.`,
+        );
+        return;
+      }
+
+      const partLabel = PART_INFO.find((p) => p.part === part)?.desc ?? `Part ${part}`;
+      setQuiz({
+        id: `bank-part${part}-${dbQuestions.length}`,
+        title: `Part ${part} — ${partLabel}`,
+        source: "db",
+        createdAt: new Date().toISOString(),
+        questions: dbQuestions,
+      });
+      setCurrentIndex(0);
+      setAnswers({});
+      setShowResult(false);
+      setShowSummary(false);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Không tải được đề");
+    } finally {
+      setLoadingPart(null);
+    }
+  };
+
   const countPresets = (
     value: number,
     onChange: (n: number) => void,
@@ -263,6 +318,34 @@ function PracticeContent() {
           </button>
         </div>
       </div>
+
+      <section className="rounded-2xl border border-border bg-white p-4 shadow-sm sm:p-5">
+        <h2 className="text-lg font-semibold text-brand">Luyện theo Part (kho đề)</h2>
+        <p className="mt-1 text-sm text-brand-muted">
+          Đề Part 5 / 6 / 7 đã được nạp sẵn vào database. Chọn part để luyện ngay — Part 6/7 kèm
+          đoạn văn và bản dịch tiếng Việt.
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-3">
+          {PART_INFO.map((p) => {
+            const count = partCounts[p.part] ?? 0;
+            return (
+              <button
+                key={p.part}
+                type="button"
+                onClick={() => handleBank(p.part)}
+                disabled={loadingPart !== null || count === 0}
+                className="flex flex-col items-start gap-1 rounded-xl border border-border bg-surface p-4 text-left transition hover:border-brand disabled:opacity-50"
+              >
+                <span className="text-base font-semibold text-brand">{p.label}</span>
+                <span className="text-xs text-brand-muted">{p.desc}</span>
+                <span className="mt-1 rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand">
+                  {loadingPart === p.part ? "Đang tải..." : `${count} câu`}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </section>
 
       <section className="rounded-2xl border border-accent/30 bg-accent/5 p-4 shadow-sm sm:p-5">
         <h2 className="text-lg font-semibold text-brand">Luyện marathon</h2>
@@ -314,9 +397,10 @@ function PracticeContent() {
                 }
                 className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm"
               >
-                {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
+                <option value="mixed">{CATEGORY_LABELS.mixed}</option>
+                {PART5_CATEGORIES.map((key) => (
                   <option key={key} value={key}>
-                    {label}
+                    {CATEGORY_LABELS[key]}
                   </option>
                 ))}
               </select>
@@ -416,6 +500,11 @@ function PracticeContent() {
               />
             </div>
           </div>
+
+          <p className="rounded-lg border border-accent/30 bg-accent/5 px-3 py-2 text-xs text-brand-muted">
+            💡 Gặp từ chưa nhớ? <span className="font-medium text-brand">Bôi đen (highlight)</span>{" "}
+            từ đó để lưu vào danh sách <a href="/vocabulary?tab=saved" className="text-accent underline">Cần nhớ</a> và ôn lại sau.
+          </p>
 
           <QuestionCard
             question={currentQuestion}

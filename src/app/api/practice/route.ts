@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDefaultUserId, withTransaction } from "@/lib/db";
 import {
+  countQuestionsByPart,
   countUserQuestions,
   getDueQuestionIds,
   getProgressStats,
+  getQuestionIdsByPart,
   getRandomQuestionIds,
   getSetQuestionIds,
   getWeakQuestionIds,
@@ -35,6 +37,30 @@ export async function GET(request: NextRequest) {
         return listExerciseSets(client, userId);
       });
       return NextResponse.json({ sets });
+    }
+
+    if (action === "counts") {
+      const counts = await withTransaction(async (client) => {
+        const userId = await getDefaultUserId(client);
+        return countQuestionsByPart(client, userId);
+      });
+      return NextResponse.json({ counts });
+    }
+
+    if (action === "bank") {
+      const part = parseInt(searchParams.get("part") ?? "5", 10);
+      const rawLimit = parseInt(searchParams.get("limit") ?? "60", 10);
+      // Part 6/7 đề ít hơn nên không ép tối thiểu 50 như marathon Part 5.
+      const limit = Math.min(100, Math.max(1, rawLimit));
+
+      const result = await withTransaction(async (client) => {
+        const userId = await getDefaultUserId(client);
+        const questionIds = await getQuestionIdsByPart(client, userId, part, limit);
+        const questions = await loadQuestionDetails(client, questionIds);
+        return { questions, part, requested: limit, available: questions.length };
+      });
+
+      return NextResponse.json(result);
     }
 
     if (action === "marathon") {

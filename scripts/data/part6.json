@@ -1,0 +1,446 @@
+{
+  "setTitle": "Part 6 - Kho đề điền đoạn văn (Text Completion)",
+  "part": 6,
+  "passages": [
+    {
+      "title": "Office Relocation Notice",
+      "passageType": "email",
+      "passageText": "To: All Staff\nFrom: Facilities Management\nSubject: Office Relocation\n\nWe are pleased to announce that our company (1)_______ to a new office located at 45 Riverside Avenue, effective March 1. The new building offers more space and modern facilities. (2)_______, it is conveniently located near several public transportation options.\n\nDuring the move, some services may be temporarily unavailable. We greatly appreciate your (3)_______ as we complete the transition. If you have any questions about the relocation, please (4)_______ the Facilities team directly.\n\nThank you for your cooperation.",
+      "passageVi": "Gửi toàn thể nhân viên — Thông báo chuyển văn phòng. Công ty sẽ chuyển tới địa chỉ mới số 45 Riverside Avenue từ ngày 1 tháng 3. Tòa nhà mới rộng hơn, tiện nghi hiện đại và gần nhiều tuyến giao thông công cộng. Mong mọi người kiên nhẫn trong thời gian chuyển đổi; nếu có thắc mắc, hãy liên hệ trực tiếp bộ phận Cơ sở vật chất.",
+      "questions": [
+        {
+          "questionText": "(1) Chọn đáp án cho chỗ trống số 1",
+          "options": ["relocated", "will be relocating", "has relocated", "had relocated"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "future tense",
+          "explanation": "\"Effective March 1\" signals a future action, so the future form \"will be relocating\" fits.",
+          "explanationVi": "Cụm \"effective March 1\" chỉ hành động tương lai → dùng thì tương lai \"will be relocating\"."
+        },
+        {
+          "questionText": "(2) Chọn đáp án cho chỗ trống số 2",
+          "options": ["However", "In addition", "Otherwise", "For example"],
+          "correctIndex": 1,
+          "category": "connector",
+          "topic": "transition word",
+          "explanation": "The sentence adds another benefit (location), so \"In addition\" is the right linking word.",
+          "explanationVi": "Câu này bổ sung thêm một lợi ích (vị trí) → dùng \"In addition\" (ngoài ra)."
+        },
+        {
+          "questionText": "(3) Chọn đáp án cho chỗ trống số 3",
+          "options": ["patient", "patiently", "patience", "patients"],
+          "correctIndex": 2,
+          "category": "word_form",
+          "topic": "possessive + noun",
+          "explanation": "After the possessive \"your\", a noun is needed. \"Patience\" (uncountable noun) is correct.",
+          "explanationVi": "Sau sở hữu \"your\" cần danh từ → \"patience\" (sự kiên nhẫn)."
+        },
+        {
+          "questionText": "(4) Chọn đáp án cho chỗ trống số 4",
+          "options": ["contacting", "contacted", "contacts", "contact"],
+          "correctIndex": 3,
+          "category": "grammar",
+          "topic": "imperative",
+          "explanation": "After \"please\" in an imperative, use the base verb. \"Contact\" is correct.",
+          "explanationVi": "Sau \"please\" trong câu mệnh lệnh dùng động từ nguyên mẫu → \"contact\"."
+        }
+      ]
+    },
+    {
+      "title": "Annual Professional Development Workshop",
+      "passageType": "notice",
+      "passageText": "Annual Professional Development Workshop\n\nThe Human Resources Department is hosting its annual professional development workshop on Friday, June 20. This year's program will (1)_______ on effective communication and leadership skills. All employees are welcome to attend.\n\nParticipants who register before June 10 will receive a complimentary workbook. (2)_______ space is limited, early registration is strongly recommended. The workshop has been extremely popular in (3)_______ years, and seats fill up quickly.\n\nTo reserve your place, please complete the online form. We look forward to your (4)_______.",
+      "passageVi": "Hội thảo phát triển nghề nghiệp thường niên do phòng Nhân sự tổ chức vào thứ Sáu ngày 20 tháng 6, tập trung vào kỹ năng giao tiếp và lãnh đạo. Ai đăng ký trước ngày 10/6 sẽ được tặng sổ tay. Vì chỗ ngồi có hạn, nên đăng ký sớm. Hãy điền mẫu trực tuyến để giữ chỗ.",
+      "questions": [
+        {
+          "questionText": "(1) Chọn đáp án cho chỗ trống số 1",
+          "options": ["focus", "focuses", "focusing", "focused"],
+          "correctIndex": 0,
+          "category": "grammar",
+          "topic": "will + base verb",
+          "explanation": "After \"will\", use the base verb. \"focus on\" = concentrate on.",
+          "explanationVi": "Sau \"will\" dùng động từ nguyên mẫu → \"focus\" (focus on = tập trung vào)."
+        },
+        {
+          "questionText": "(2) Chọn đáp án cho chỗ trống số 2",
+          "options": ["Because", "Therefore", "However", "In addition"],
+          "correctIndex": 0,
+          "category": "connector",
+          "topic": "conjunction of reason",
+          "explanation": "\"Because space is limited\" gives the reason for registering early.",
+          "explanationVi": "\"Because space is limited\" nêu lý do nên đăng ký sớm → \"Because\" (bởi vì)."
+        },
+        {
+          "questionText": "(3) Chọn đáp án cho chỗ trống số 3",
+          "options": ["previously", "preview", "previous", "prevention"],
+          "correctIndex": 2,
+          "category": "word_form",
+          "topic": "adjective + noun",
+          "explanation": "An adjective modifies the noun \"years\". \"Previous years\" = earlier years.",
+          "explanationVi": "Cần tính từ bổ nghĩa cho danh từ \"years\" → \"previous\" (những năm trước)."
+        },
+        {
+          "questionText": "(4) Chọn đáp án cho chỗ trống số 4",
+          "options": ["participate", "participant", "participation", "participated"],
+          "correctIndex": 2,
+          "category": "word_form",
+          "topic": "possessive + noun",
+          "explanation": "After the possessive \"your\", a noun is required. \"Participation\" is correct.",
+          "explanationVi": "Sau sở hữu \"your\" cần danh từ → \"participation\" (sự tham gia)."
+        }
+      ]
+    },
+    {
+      "title": "Updated Remote Work Policy",
+      "passageType": "memo",
+      "passageText": "MEMO\nTo: All Department Heads\nFrom: Office of the President\nRe: Updated Remote Work Policy\n\nBeginning next month, employees will be permitted to work remotely up to two days per week. This change reflects our (1)_______ to improving work-life balance. Department heads are responsible for ensuring that team productivity (2)_______ unaffected.\n\nEmployees who wish to work remotely must obtain approval from their direct supervisor. (3)_______, they should ensure that they have a reliable internet connection at home. A detailed guide outlining the new procedures (4)_______ to all staff by email next week.",
+      "passageVi": "Bản ghi nhớ về chính sách làm việc từ xa cập nhật: từ tháng sau, nhân viên được làm từ xa tối đa 2 ngày/tuần, thể hiện cam kết cải thiện cân bằng công việc - cuộc sống. Trưởng bộ phận đảm bảo năng suất không bị ảnh hưởng. Nhân viên muốn làm từ xa phải được cấp trên duyệt và có internet ổn định. Hướng dẫn chi tiết sẽ được gửi qua email tuần tới.",
+      "questions": [
+        {
+          "questionText": "(1) Chọn đáp án cho chỗ trống số 1",
+          "options": ["commit", "commitment", "committed", "commits"],
+          "correctIndex": 1,
+          "category": "word_form",
+          "topic": "possessive + noun",
+          "explanation": "After the possessive \"our\", a noun is required. \"commitment to\" = a pledge to.",
+          "explanationVi": "Sau sở hữu \"our\" cần danh từ → \"commitment\" (sự cam kết); cụm \"commitment to\"."
+        },
+        {
+          "questionText": "(2) Chọn đáp án cho chỗ trống số 2",
+          "options": ["remain", "remains", "remaining", "remained"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "subject-verb agreement",
+          "explanation": "The singular subject \"productivity\" in the present takes \"remains\".",
+          "explanationVi": "Chủ ngữ số ít \"productivity\" ở hiện tại → động từ \"remains\"."
+        },
+        {
+          "questionText": "(3) Chọn đáp án cho chỗ trống số 3",
+          "options": ["However", "In addition", "Otherwise", "Nevertheless"],
+          "correctIndex": 1,
+          "category": "connector",
+          "topic": "transition word",
+          "explanation": "Another requirement is added (internet connection), so \"In addition\" fits.",
+          "explanationVi": "Câu bổ sung thêm một yêu cầu (kết nối internet) → \"In addition\" (ngoài ra)."
+        },
+        {
+          "questionText": "(4) Chọn đáp án cho chỗ trống số 4",
+          "options": ["sent", "will be sent", "has sent", "sending"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "future passive",
+          "explanation": "The guide is the receiver of the action and the time is future (\"next week\"): \"will be sent\".",
+          "explanationVi": "Bản hướng dẫn là đối tượng nhận hành động, thời gian tương lai (\"next week\") → bị động tương lai \"will be sent\"."
+        }
+      ]
+    },
+    {
+      "title": "Letter to a Customer",
+      "passageType": "letter",
+      "passageText": "Dear Mr. Carter,\n\nThank you for your recent order from Brightway Electronics. We regret to inform you that the item you requested is currently out of stock. We expect a new (1)_______ to arrive within two weeks.\n\nWe sincerely apologize for any (2)_______ this may cause. As a token of our appreciation for your patience, we would like to offer you a 15 percent discount on your next purchase. (3)_______ you prefer, we can also cancel your order and issue a full refund.\n\nPlease let us know how you would like to (4)_______. Thank you for choosing Brightway Electronics.",
+      "passageVi": "Thư gửi khách hàng: Cảm ơn ông Carter đã đặt hàng tại Brightway Electronics. Rất tiếc món hàng đang hết; dự kiến lô hàng mới về trong hai tuần. Xin lỗi vì sự bất tiện. Để cảm ơn sự kiên nhẫn, cửa hàng tặng giảm giá 15% cho lần mua tới; nếu khách muốn, có thể hủy đơn và hoàn tiền đầy đủ. Vui lòng cho biết quý khách muốn tiến hành thế nào.",
+      "questions": [
+        {
+          "questionText": "(1) Chọn đáp án cho chỗ trống số 1",
+          "options": ["ship", "shipment", "shipped", "shipping"],
+          "correctIndex": 1,
+          "category": "word_form",
+          "topic": "article + noun",
+          "explanation": "After \"a new\", a singular noun is needed. \"Shipment\" = a delivery of goods.",
+          "explanationVi": "Sau \"a new\" cần danh từ số ít → \"shipment\" (lô hàng)."
+        },
+        {
+          "questionText": "(2) Chọn đáp án cho chỗ trống số 2",
+          "options": ["convenient", "conveniently", "inconvenience", "convenience"],
+          "correctIndex": 2,
+          "category": "vocabulary",
+          "topic": "noun with correct meaning",
+          "explanation": "Apologizing for \"any inconvenience\" is the standard collocation; the meaning must be negative.",
+          "explanationVi": "Xin lỗi vì \"any inconvenience\" (sự bất tiện) là cụm chuẩn; nghĩa phải mang tính tiêu cực."
+        },
+        {
+          "questionText": "(3) Chọn đáp án cho chỗ trống số 3",
+          "options": ["Despite", "Although", "If", "Unless"],
+          "correctIndex": 2,
+          "category": "connector",
+          "topic": "conditional clause",
+          "explanation": "\"If you prefer\" introduces a condition offering an alternative.",
+          "explanationVi": "\"If you prefer\" mở đầu mệnh đề điều kiện đưa ra lựa chọn thay thế → \"If\"."
+        },
+        {
+          "questionText": "(4) Chọn đáp án cho chỗ trống số 4",
+          "options": ["proceed", "precede", "exceed", "succeed"],
+          "correctIndex": 0,
+          "category": "vocabulary",
+          "topic": "word meaning",
+          "explanation": "\"How you would like to proceed\" = how you want to continue. The others do not fit.",
+          "explanationVi": "\"How you would like to proceed\" = quý khách muốn tiến hành thế nào → \"proceed\"."
+        }
+      ]
+    },
+    {
+      "title": "New Parking Procedure",
+      "passageType": "notice",
+      "passageText": "Attention All Employees\n\nBeginning next Monday, the company (1)_______ a new parking system in the main lot. Each employee will be assigned a numbered space, and parking permits must be displayed on the dashboard at all times. (2)_______, visitors should use the designated spots near the entrance.\n\nThe new system is intended to reduce congestion and ensure that everyone has a (3)_______ place to park. We ask for your cooperation during the first week as everyone adjusts. If your assigned space is occupied, please (4)_______ the security office immediately.",
+      "passageVi": "Thông báo về quy trình đỗ xe mới: từ thứ Hai tới, công ty áp dụng hệ thống đỗ xe mới ở bãi chính; mỗi nhân viên có một ô đánh số, phải để thẻ đỗ xe trên táp-lô. Khách dùng các ô gần cổng. Hệ thống nhằm giảm ùn tắc và đảm bảo ai cũng có chỗ đỗ riêng. Nếu ô của bạn bị chiếm, hãy báo ngay cho bộ phận bảo vệ.",
+      "questions": [
+        {
+          "questionText": "(1) Chọn đáp án cho chỗ trống số 1",
+          "options": ["introduces", "will introduce", "introduced", "has introduced"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "future tense",
+          "explanation": "\"Beginning next Monday\" signals the future, so \"will introduce\" fits.",
+          "explanationVi": "Cụm \"Beginning next Monday\" chỉ tương lai → \"will introduce\"."
+        },
+        {
+          "questionText": "(2) Chọn đáp án cho chỗ trống số 2",
+          "options": ["In addition", "However", "Otherwise", "For example"],
+          "correctIndex": 0,
+          "category": "connector",
+          "topic": "transition word",
+          "explanation": "The sentence adds another rule (for visitors), so \"In addition\" fits.",
+          "explanationVi": "Câu bổ sung thêm một quy định (cho khách) → \"In addition\" (ngoài ra)."
+        },
+        {
+          "questionText": "(3) Chọn đáp án cho chỗ trống số 3",
+          "options": ["reserve", "reserved", "reservation", "reserving"],
+          "correctIndex": 1,
+          "category": "word_form",
+          "topic": "adjective + noun",
+          "explanation": "An adjective modifies \"place\". \"Reserved\" (= set aside) is correct.",
+          "explanationVi": "Cần tính từ bổ nghĩa cho \"place\" → \"reserved\" (được dành riêng)."
+        },
+        {
+          "questionText": "(4) Chọn đáp án cho chỗ trống số 4",
+          "options": ["notifying", "notified", "notifies", "notify"],
+          "correctIndex": 3,
+          "category": "grammar",
+          "topic": "imperative",
+          "explanation": "After \"please\" in an imperative, use the base verb \"notify\".",
+          "explanationVi": "Sau \"please\" trong câu mệnh lệnh dùng động từ nguyên mẫu → \"notify\"."
+        }
+      ]
+    },
+    {
+      "title": "Mandatory Software Training",
+      "passageType": "email",
+      "passageText": "To: All Staff\nFrom: IT Department\nSubject: Mandatory Software Training\n\nAs part of our system upgrade, all employees are required to (1)_______ a training session on the new project-management software. The sessions will be held in Conference Room C throughout next week.\n\nPlease sign up for a time slot that best (2)_______ your schedule. Each session lasts approximately 90 minutes. (3)_______ you are unable to attend any of the scheduled times, contact the IT department to arrange an alternative.\n\nAfter the training, you will be given login details and a short user guide. We appreciate your (4)_______ in making this transition a smooth one.",
+      "passageVi": "Email từ bộ phận IT: trong đợt nâng cấp hệ thống, mọi nhân viên phải dự buổi đào tạo phần mềm quản lý dự án mới, tổ chức tại phòng họp C suốt tuần sau. Hãy chọn khung giờ hợp lịch của bạn; mỗi buổi khoảng 90 phút. Nếu không dự được giờ nào, liên hệ IT để sắp buổi khác. Sau đào tạo sẽ được cấp thông tin đăng nhập và tài liệu hướng dẫn.",
+      "questions": [
+        {
+          "questionText": "(1) Chọn đáp án cho chỗ trống số 1",
+          "options": ["attends", "attend", "attending", "attended"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "to + base verb",
+          "explanation": "\"required to + base verb\". \"Attend\" is correct.",
+          "explanationVi": "Cấu trúc \"required to + V nguyên mẫu\" → \"attend\"."
+        },
+        {
+          "questionText": "(2) Chọn đáp án cho chỗ trống số 2",
+          "options": ["suit", "suits", "suited", "suiting"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "subject-verb agreement",
+          "explanation": "The relative clause subject \"that\" (= a time slot) is singular → \"suits\".",
+          "explanationVi": "Chủ ngữ mệnh đề quan hệ \"that\" (một khung giờ) số ít → \"suits\"."
+        },
+        {
+          "questionText": "(3) Chọn đáp án cho chỗ trống số 3",
+          "options": ["If", "Despite", "Unless", "Although"],
+          "correctIndex": 0,
+          "category": "connector",
+          "topic": "conditional clause",
+          "explanation": "\"If you are unable to attend\" introduces a condition.",
+          "explanationVi": "\"If you are unable to attend\" mở đầu mệnh đề điều kiện → \"If\"."
+        },
+        {
+          "questionText": "(4) Chọn đáp án cho chỗ trống số 4",
+          "options": ["cooperate", "cooperative", "cooperation", "cooperatively"],
+          "correctIndex": 2,
+          "category": "word_form",
+          "topic": "possessive + noun",
+          "explanation": "After the possessive \"your\", a noun is required. \"Cooperation\" is correct.",
+          "explanationVi": "Sau sở hữu \"your\" cần danh từ → \"cooperation\" (sự hợp tác)."
+        }
+      ]
+    },
+    {
+      "title": "Office Recycling Program",
+      "passageType": "memo",
+      "passageText": "MEMO\nTo: All Departments\nFrom: Facilities Management\nRe: New Recycling Program\n\nWe are excited to launch a new office recycling program starting this month. Clearly labeled bins (1)_______ on every floor for paper, plastic, and glass. We encourage all staff to sort their waste (2)_______.\n\nReducing waste is one of our company's key environmental (3)_______. By participating, you will help us lower costs and protect the environment. (4)_______, employees who suggest additional green initiatives may receive a small reward.\n\nThank you for your support.",
+      "passageVi": "Bản ghi nhớ về chương trình tái chế: từ tháng này, các thùng có dán nhãn rõ ràng sẽ được đặt ở mỗi tầng cho giấy, nhựa và thủy tinh. Khuyến khích nhân viên phân loại rác đúng cách. Giảm rác thải là một trong các mục tiêu môi trường chính của công ty. Tham gia giúp giảm chi phí và bảo vệ môi trường. Ngoài ra, ai đề xuất sáng kiến xanh có thể được thưởng nhỏ.",
+      "questions": [
+        {
+          "questionText": "(1) Chọn đáp án cho chỗ trống số 1",
+          "options": ["have placed", "will be placed", "placing", "places"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "future passive",
+          "explanation": "The bins receive the action and the program is starting, so \"will be placed\".",
+          "explanationVi": "Các thùng là đối tượng nhận hành động, chương trình sắp bắt đầu → \"will be placed\"."
+        },
+        {
+          "questionText": "(2) Chọn đáp án cho chỗ trống số 2",
+          "options": ["proper", "properly", "propriety", "properness"],
+          "correctIndex": 1,
+          "category": "word_form",
+          "topic": "adverb modifying verb",
+          "explanation": "An adverb modifies the verb \"sort\". \"Properly\" is correct.",
+          "explanationVi": "Cần trạng từ bổ nghĩa cho động từ \"sort\" → \"properly\"."
+        },
+        {
+          "questionText": "(3) Chọn đáp án cho chỗ trống số 3",
+          "options": ["goal", "goals", "to goal", "goaling"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "one of + plural noun",
+          "explanation": "\"One of our key environmental ___\" requires a plural noun → \"goals\".",
+          "explanationVi": "\"One of our key environmental ___\" cần danh từ số nhiều → \"goals\"."
+        },
+        {
+          "questionText": "(4) Chọn đáp án cho chỗ trống số 4",
+          "options": ["However", "In addition", "Otherwise", "Nevertheless"],
+          "correctIndex": 1,
+          "category": "connector",
+          "topic": "transition word",
+          "explanation": "Another incentive is added (a reward), so \"In addition\" fits.",
+          "explanationVi": "Câu thêm một ưu đãi nữa (phần thưởng) → \"In addition\" (ngoài ra)."
+        }
+      ]
+    },
+    {
+      "title": "Magazine Subscription Renewal",
+      "passageType": "letter",
+      "passageText": "Dear Subscriber,\n\nWe hope you have been enjoying your subscription to Modern Architecture Magazine. Our records show that your current subscription (1)_______ at the end of this month.\n\nTo continue receiving the magazine without interruption, please renew before the expiration date. As a valued reader, you (2)_______ a special renewal rate of just $30 for the year — a 25 percent discount off the regular price. (3)_______, you will gain free access to our complete online archive.\n\nRenewing is easy: simply visit our website or call our customer service line. We look forward to (4)_______ you as a subscriber for another year.",
+      "passageVi": "Thư gia hạn đăng ký tạp chí Modern Architecture: hồ sơ cho thấy gói hiện tại của bạn hết hạn cuối tháng này. Để nhận tạp chí liên tục, hãy gia hạn trước ngày hết hạn. Là độc giả thân thiết, bạn sẽ được giá gia hạn đặc biệt chỉ $30/năm — giảm 25% so với giá thường. Ngoài ra, bạn được truy cập miễn phí toàn bộ kho lưu trữ trực tuyến. Gia hạn dễ dàng qua website hoặc gọi tổng đài.",
+      "questions": [
+        {
+          "questionText": "(1) Chọn đáp án cho chỗ trống số 1",
+          "options": ["expire", "expires", "expired", "expiring"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "subject-verb agreement",
+          "explanation": "The singular subject \"your subscription\" takes \"expires\".",
+          "explanationVi": "Chủ ngữ số ít \"your subscription\" → động từ \"expires\"."
+        },
+        {
+          "questionText": "(2) Chọn đáp án cho chỗ trống số 2",
+          "options": ["received", "will receive", "receiving", "to receive"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "future tense",
+          "explanation": "An offer for renewal is a future benefit, so \"will receive\" fits.",
+          "explanationVi": "Ưu đãi khi gia hạn là lợi ích tương lai → \"will receive\"."
+        },
+        {
+          "questionText": "(3) Chọn đáp án cho chỗ trống số 3",
+          "options": ["In addition", "However", "Otherwise", "Therefore"],
+          "correctIndex": 0,
+          "category": "connector",
+          "topic": "transition word",
+          "explanation": "Another benefit (online archive) is added, so \"In addition\" fits.",
+          "explanationVi": "Câu thêm một lợi ích nữa (kho trực tuyến) → \"In addition\"."
+        },
+        {
+          "questionText": "(4) Chọn đáp án cho chỗ trống số 4",
+          "options": ["have", "having", "had", "to have"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "look forward to + gerund",
+          "explanation": "\"Look forward to\" is followed by a gerund → \"having\".",
+          "explanationVi": "\"Look forward to\" đi với danh động từ → \"having\"."
+        }
+      ]
+    },
+    {
+      "title": "Downtown Store Renovation",
+      "passageType": "notice",
+      "passageText": "Notice to Our Valued Customers\n\nWe are pleased to announce that our downtown store will undergo a major renovation to serve you better. During the renovation, the store will remain (1)_______, though some departments may be temporarily relocated within the building.\n\nWe expect the work to be (2)_______ by the end of September. (3)_______ the construction work, you may notice some noise and dust, and we apologize in advance. To thank you for your patience, all customers will receive a 10 percent discount (4)_______ the renovation period.\n\nWe appreciate your continued loyalty.",
+      "passageVi": "Thông báo cho khách hàng: cửa hàng trung tâm sẽ cải tạo lớn để phục vụ tốt hơn. Trong thời gian cải tạo, cửa hàng vẫn mở cửa dù một số quầy có thể dời tạm trong tòa nhà. Dự kiến hoàn tất cuối tháng 9. Trong lúc thi công, có thể có tiếng ồn và bụi, mong khách thông cảm. Để cảm ơn, mọi khách được giảm 10% trong suốt thời gian cải tạo.",
+      "questions": [
+        {
+          "questionText": "(1) Chọn đáp án cho chỗ trống số 1",
+          "options": ["opened", "open", "opens", "opening"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "remain + adjective",
+          "explanation": "\"Remain + adjective\". \"Open\" describes the store's state.",
+          "explanationVi": "\"Remain + tính từ\" → \"open\" (vẫn mở cửa)."
+        },
+        {
+          "questionText": "(2) Chọn đáp án cho chỗ trống số 2",
+          "options": ["complete", "completed", "completion", "completely"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "passive infinitive",
+          "explanation": "\"to be + past participle\" (the work is completed) → \"completed\".",
+          "explanationVi": "\"to be + quá khứ phân từ\" (công việc được hoàn tất) → \"completed\"."
+        },
+        {
+          "questionText": "(3) Chọn đáp án cho chỗ trống số 3",
+          "options": ["Although", "During", "Because", "Whether"],
+          "correctIndex": 1,
+          "category": "connector",
+          "topic": "preposition + noun",
+          "explanation": "\"During\" + noun phrase (the construction work) marks a time period.",
+          "explanationVi": "\"During\" + cụm danh từ (the construction work) chỉ khoảng thời gian."
+        },
+        {
+          "questionText": "(4) Chọn đáp án cho chỗ trống số 4",
+          "options": ["among", "throughout", "along", "across"],
+          "correctIndex": 1,
+          "category": "vocabulary",
+          "topic": "preposition of time",
+          "explanation": "\"Throughout the renovation period\" = during the entire period.",
+          "explanationVi": "\"Throughout the renovation period\" = suốt cả thời gian cải tạo."
+        }
+      ]
+    },
+    {
+      "title": "Welcome to Vertex Solutions",
+      "passageType": "email",
+      "passageText": "To: Daniel Foster\nFrom: Grace Liu, Human Resources\nSubject: Welcome to Vertex Solutions\n\nDear Mr. Foster,\n\nOn behalf of everyone at Vertex Solutions, I am delighted to (1)_______ you to our team. Your first day will be Monday, March 3. Please arrive at 9 A.M. and report to the reception desk on the third floor.\n\nBefore your start date, kindly complete the attached forms and return them to me. These documents are (2)_______ for setting up your payroll and benefits. (3)_______ you have any questions, feel free to reach out to me directly.\n\nWe are confident that your skills will be a valuable (4)_______ to our company, and we look forward to working with you.",
+      "passageVi": "Email chào mừng của phòng Nhân sự gửi anh Foster: rất vui chào đón anh vào nhóm; ngày đầu là thứ Hai 3/3, đến 9h và tới quầy lễ tân tầng 3. Trước ngày bắt đầu, vui lòng điền các mẫu đính kèm và gửi lại — đây là tài liệu cần thiết để thiết lập lương và phúc lợi. Có thắc mắc gì cứ liên hệ trực tiếp. Tin rằng kỹ năng của anh sẽ là bổ sung quý giá cho công ty.",
+      "questions": [
+        {
+          "questionText": "(1) Chọn đáp án cho chỗ trống số 1",
+          "options": ["welcomes", "welcome", "welcoming", "welcomed"],
+          "correctIndex": 1,
+          "category": "grammar",
+          "topic": "to + base verb",
+          "explanation": "\"delighted to + base verb\" → \"welcome\".",
+          "explanationVi": "Cấu trúc \"delighted to + V nguyên mẫu\" → \"welcome\"."
+        },
+        {
+          "questionText": "(2) Chọn đáp án cho chỗ trống số 2",
+          "options": ["necessary", "necessarily", "necessity", "necessitate"],
+          "correctIndex": 0,
+          "category": "word_form",
+          "topic": "adjective after linking verb",
+          "explanation": "\"are + adjective\". \"Necessary\" describes the documents.",
+          "explanationVi": "\"are + tính từ\" → \"necessary\" (cần thiết)."
+        },
+        {
+          "questionText": "(3) Chọn đáp án cho chỗ trống số 3",
+          "options": ["Despite", "Should", "Unless", "Whether"],
+          "correctIndex": 1,
+          "category": "connector",
+          "topic": "inverted conditional",
+          "explanation": "\"Should you have any questions\" = If you have any questions.",
+          "explanationVi": "\"Should you have any questions\" = Nếu anh có thắc mắc (điều kiện đảo ngữ)."
+        },
+        {
+          "questionText": "(4) Chọn đáp án cho chỗ trống số 4",
+          "options": ["add", "addition", "additional", "additionally"],
+          "correctIndex": 1,
+          "category": "word_form",
+          "topic": "article + noun",
+          "explanation": "After \"a valuable\", a noun is needed. \"Addition\" is correct.",
+          "explanationVi": "Sau \"a valuable\" cần danh từ → \"addition\" (sự bổ sung)."
+        }
+      ]
+    }
+  ]
+}

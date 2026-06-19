@@ -1,0 +1,606 @@
+{
+  "setTitle": "Part 5 - Kho đề luyện (Grammar / Vocabulary / Word Forms)",
+  "part": 5,
+  "questions": [
+    {
+      "sentence": "All employees must _______ their identification badges at all times while on the premises.",
+      "options": ["wear", "wears", "wearing", "worn"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "modal + bare infinitive",
+      "explanation": "After the modal verb \"must\", use the bare infinitive. \"Wear\" is correct.",
+      "explanationVi": "Sau động từ khuyết thiếu \"must\" dùng động từ nguyên mẫu không \"to\" → \"wear\".",
+      "vocab": [{ "word": "premises", "meaning": "khuôn viên, cơ sở", "type": "noun", "example": "No smoking is allowed on the premises." }]
+    },
+    {
+      "sentence": "The new accounting software has significantly improved the _______ of monthly reports.",
+      "options": ["accurate", "accurately", "accuracy", "accurateness"],
+      "correctIndex": 2,
+      "category": "word_form",
+      "topic": "article + noun",
+      "explanation": "After \"the\" and as the object of \"improved\", a noun is required. \"Accuracy\" is the standard noun.",
+      "explanationVi": "Sau \"the\" và làm tân ngữ của \"improved\" cần danh từ → \"accuracy\" (độ chính xác).",
+      "vocab": [{ "word": "accuracy", "meaning": "độ chính xác", "type": "noun" }]
+    },
+    {
+      "sentence": "Ms. Tanaka will be promoted to regional manager _______ she completes the training program.",
+      "options": ["once", "despite", "during", "because of"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "conjunction of time",
+      "explanation": "\"Once\" (= as soon as) introduces a time clause with subject + verb. \"Despite\"/\"because of\" take nouns; \"during\" is a preposition.",
+      "explanationVi": "\"Once\" (ngay khi) nối mệnh đề có chủ ngữ + động từ. \"Despite/because of\" đi với danh từ, \"during\" là giới từ.",
+      "vocab": [{ "word": "promote", "meaning": "thăng chức", "type": "verb" }]
+    },
+    {
+      "sentence": "The conference room is fully equipped _______ a projector and a high-speed internet connection.",
+      "options": ["with", "of", "to", "for"],
+      "correctIndex": 0,
+      "category": "collocation",
+      "topic": "equipped with",
+      "explanation": "The fixed collocation is \"equipped with\" (provided with).",
+      "explanationVi": "Cụm cố định \"equipped with\" (được trang bị).",
+      "vocab": [{ "word": "equip", "meaning": "trang bị", "type": "verb" }]
+    },
+    {
+      "sentence": "Please make sure to _______ the attached document carefully before signing the contract.",
+      "options": ["review", "preview", "overview", "viewing"],
+      "correctIndex": 0,
+      "category": "vocabulary",
+      "topic": "verb choice",
+      "explanation": "\"Review\" means to examine carefully. \"Overview\" is a noun; \"viewing\" is the wrong form after \"to\".",
+      "explanationVi": "\"Review\" = xem lại/kiểm tra kỹ. \"Overview\" là danh từ; \"viewing\" sai dạng sau \"to\".",
+      "vocab": [{ "word": "review", "meaning": "xem xét, kiểm tra lại", "type": "verb" }]
+    },
+    {
+      "sentence": "Sales figures for the third quarter were _______ higher than analysts had predicted.",
+      "options": ["considerable", "consider", "considerably", "consideration"],
+      "correctIndex": 2,
+      "category": "word_form",
+      "topic": "adverb modifying adjective",
+      "explanation": "An adverb is needed to modify the adjective \"higher\". \"Considerably\" = significantly.",
+      "explanationVi": "Cần trạng từ bổ nghĩa cho tính từ \"higher\" → \"considerably\" (đáng kể).",
+      "vocab": [{ "word": "considerably", "meaning": "đáng kể", "type": "adverb" }]
+    },
+    {
+      "sentence": "The factory will remain closed _______ the national holiday next Monday.",
+      "options": ["during", "while", "since", "within"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "preposition of time",
+      "explanation": "\"During\" + noun phrase (the national holiday). \"While\" needs a clause; \"since\" needs a start point.",
+      "explanationVi": "\"During\" + cụm danh từ (the national holiday). \"While\" cần mệnh đề; \"since\" cần mốc thời gian.",
+      "vocab": []
+    },
+    {
+      "sentence": "Employees are encouraged to submit their suggestions _______ the online feedback portal.",
+      "options": ["through", "across", "along", "onto"],
+      "correctIndex": 0,
+      "category": "collocation",
+      "topic": "preposition of means",
+      "explanation": "\"Through\" expresses the means/channel: submit something through a portal.",
+      "explanationVi": "\"Through\" chỉ phương tiện/kênh: gửi qua cổng thông tin.",
+      "vocab": [{ "word": "submit", "meaning": "nộp, gửi", "type": "verb" }]
+    },
+    {
+      "sentence": "Because the shipment was delayed, the manager had to _______ the client and apologize.",
+      "options": ["contact", "contacts", "contacting", "contacted"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "had to + base verb",
+      "explanation": "After \"had to\", use the base form. \"Contact\" is correct.",
+      "explanationVi": "Sau \"had to\" dùng động từ nguyên mẫu → \"contact\".",
+      "vocab": [{ "word": "shipment", "meaning": "lô hàng", "type": "noun" }]
+    },
+    {
+      "sentence": "The marketing team developed a _______ strategy to attract younger customers.",
+      "options": ["create", "creatively", "creative", "creativity"],
+      "correctIndex": 2,
+      "category": "word_form",
+      "topic": "adjective + noun",
+      "explanation": "An adjective modifies the noun \"strategy\". \"Creative\" is correct.",
+      "explanationVi": "Cần tính từ bổ nghĩa cho danh từ \"strategy\" → \"creative\".",
+      "vocab": [{ "word": "strategy", "meaning": "chiến lược", "type": "noun" }]
+    },
+    {
+      "sentence": "_______ the heavy rain, the outdoor event proceeded exactly as scheduled.",
+      "options": ["Despite", "Although", "However", "Because"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "preposition vs conjunction",
+      "explanation": "\"Despite\" + noun phrase (the heavy rain). \"Although\"/\"Because\" need a clause; \"However\" is an adverb.",
+      "explanationVi": "\"Despite\" + cụm danh từ (the heavy rain). \"Although/Because\" cần mệnh đề; \"However\" là trạng từ.",
+      "vocab": [{ "word": "proceed", "meaning": "tiến hành, tiếp tục", "type": "verb" }]
+    },
+    {
+      "sentence": "The director asked the assistant to _______ copies of the report for all attendees.",
+      "options": ["make", "made", "making", "makes"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "to-infinitive",
+      "explanation": "\"ask someone to + base verb\". \"Make\" is correct.",
+      "explanationVi": "Cấu trúc \"ask someone to + V nguyên mẫu\" → \"make\".",
+      "vocab": [{ "word": "attendee", "meaning": "người tham dự", "type": "noun" }]
+    },
+    {
+      "sentence": "Our company is committed to providing _______ customer service around the clock.",
+      "options": ["excel", "excellent", "excellently", "excellence"],
+      "correctIndex": 1,
+      "category": "word_form",
+      "topic": "adjective + noun",
+      "explanation": "An adjective modifies \"customer service\". \"Excellent\" is correct.",
+      "explanationVi": "Cần tính từ bổ nghĩa cho \"customer service\" → \"excellent\".",
+      "vocab": [{ "word": "around the clock", "meaning": "suốt ngày đêm, 24/24", "type": "idiom" }]
+    },
+    {
+      "sentence": "The technician will arrive _______ 9 A.M. and noon to repair the equipment.",
+      "options": ["between", "among", "within", "from"],
+      "correctIndex": 0,
+      "category": "collocation",
+      "topic": "between ... and",
+      "explanation": "\"Between A and B\" marks a range of two points. \"Among\" is for three or more.",
+      "explanationVi": "\"Between A and B\" chỉ khoảng giữa hai mốc. \"Among\" dùng cho từ ba thứ trở lên.",
+      "vocab": [{ "word": "technician", "meaning": "kỹ thuật viên", "type": "noun" }]
+    },
+    {
+      "sentence": "All visitors must register at the front desk _______ entering the building.",
+      "options": ["before", "ago", "already", "since"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "preposition + gerund",
+      "explanation": "\"Before\" + gerund (entering). \"Ago\"/\"already\" are adverbs; \"since\" needs a start point.",
+      "explanationVi": "\"Before\" + danh động từ (entering). \"Ago/already\" là trạng từ; \"since\" cần mốc thời gian.",
+      "vocab": [{ "word": "register", "meaning": "đăng ký", "type": "verb" }]
+    },
+    {
+      "sentence": "The proposal was rejected because it did not _______ the budget requirements.",
+      "options": ["meet", "meets", "meeting", "met"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "did not + base verb",
+      "explanation": "After the auxiliary \"did not\", use the base form. \"Meet\" is correct.",
+      "explanationVi": "Sau trợ động từ \"did not\" dùng động từ nguyên mẫu → \"meet\".",
+      "vocab": [{ "word": "proposal", "meaning": "đề xuất", "type": "noun" }]
+    },
+    {
+      "sentence": "Mr. Lopez has worked in the logistics department _______ more than fifteen years.",
+      "options": ["for", "since", "during", "while"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "for + duration",
+      "explanation": "\"For\" + a length of time (fifteen years). \"Since\" needs a starting point.",
+      "explanationVi": "\"For\" + khoảng thời gian (fifteen years). \"Since\" cần mốc bắt đầu.",
+      "vocab": [{ "word": "logistics", "meaning": "hậu cần", "type": "noun" }]
+    },
+    {
+      "sentence": "The updated policy applies to all staff members, _______ of their position.",
+      "options": ["regardless", "regard", "regarding", "regarded"],
+      "correctIndex": 0,
+      "category": "collocation",
+      "topic": "regardless of",
+      "explanation": "Fixed phrase \"regardless of\" = no matter what.",
+      "explanationVi": "Cụm cố định \"regardless of\" = bất kể, không phân biệt.",
+      "vocab": [{ "word": "policy", "meaning": "chính sách", "type": "noun" }]
+    },
+    {
+      "sentence": "The new smartphone model is expected to _______ all previous sales records.",
+      "options": ["exceed", "accede", "precede", "concede"],
+      "correctIndex": 0,
+      "category": "vocabulary",
+      "topic": "word meaning",
+      "explanation": "\"Exceed\" = go beyond. Records are exceeded, not acceded/preceded/conceded.",
+      "explanationVi": "\"Exceed\" = vượt qua. Kỷ lục thì bị \"exceeded\" (vượt qua), không phải accede/precede/concede.",
+      "vocab": [{ "word": "exceed", "meaning": "vượt quá", "type": "verb" }]
+    },
+    {
+      "sentence": "Training sessions are held _______ to ensure that employees stay up to date.",
+      "options": ["regular", "regulate", "regularly", "regularity"],
+      "correctIndex": 2,
+      "category": "word_form",
+      "topic": "adverb modifying verb",
+      "explanation": "An adverb modifies the verb \"are held\". \"Regularly\" is correct.",
+      "explanationVi": "Cần trạng từ bổ nghĩa cho động từ \"are held\" → \"regularly\" (đều đặn).",
+      "vocab": [{ "word": "up to date", "meaning": "cập nhật, mới nhất", "type": "idiom" }]
+    },
+    {
+      "sentence": "The committee will announce its _______ at the end of the meeting.",
+      "options": ["decide", "decision", "decisive", "decisively"],
+      "correctIndex": 1,
+      "category": "word_form",
+      "topic": "possessive + noun",
+      "explanation": "After the possessive \"its\", a noun is required. \"Decision\" is correct.",
+      "explanationVi": "Sau sở hữu \"its\" cần danh từ → \"decision\" (quyết định).",
+      "vocab": [{ "word": "committee", "meaning": "ủy ban", "type": "noun" }]
+    },
+    {
+      "sentence": "Customers who purchase the premium plan will receive a _______ discount on future orders.",
+      "options": ["substantial", "substantially", "substance", "substantiate"],
+      "correctIndex": 0,
+      "category": "word_form",
+      "topic": "adjective + noun",
+      "explanation": "An adjective modifies the noun \"discount\". \"Substantial\" = large.",
+      "explanationVi": "Cần tính từ bổ nghĩa cho danh từ \"discount\" → \"substantial\" (đáng kể, lớn).",
+      "vocab": [{ "word": "substantial", "meaning": "đáng kể, lớn", "type": "adjective" }]
+    },
+    {
+      "sentence": "The supervisor reminded the team to keep the workspace _______ at all times.",
+      "options": ["organize", "organized", "organizing", "organization"],
+      "correctIndex": 1,
+      "category": "grammar",
+      "topic": "keep + object + past participle",
+      "explanation": "\"Keep + object + adjective/past participle\". \"Organized\" describes the state of the workspace.",
+      "explanationVi": "\"Keep + tân ngữ + tính từ/quá khứ phân từ\" → \"organized\" (gọn gàng, ngăn nắp).",
+      "vocab": [{ "word": "workspace", "meaning": "không gian làm việc", "type": "noun" }]
+    },
+    {
+      "sentence": "Ms. Patel is responsible _______ coordinating the international shipments.",
+      "options": ["for", "of", "to", "with"],
+      "correctIndex": 0,
+      "category": "collocation",
+      "topic": "responsible for",
+      "explanation": "Fixed phrase \"responsible for\" + gerund/noun.",
+      "explanationVi": "Cụm cố định \"responsible for\" + danh động từ/danh từ.",
+      "vocab": [{ "word": "coordinate", "meaning": "điều phối", "type": "verb" }]
+    },
+    {
+      "sentence": "The seminar was so _______ that many participants asked for a follow-up session.",
+      "options": ["inform", "informative", "information", "informatively"],
+      "correctIndex": 1,
+      "category": "word_form",
+      "topic": "so + adjective",
+      "explanation": "\"So + adjective + that\". \"Informative\" describes the seminar.",
+      "explanationVi": "Cấu trúc \"so + tính từ + that\" → \"informative\" (nhiều thông tin, bổ ích).",
+      "vocab": [{ "word": "follow-up", "meaning": "sự tiếp nối, bổ sung", "type": "adjective" }]
+    },
+    {
+      "sentence": "Neither the manager _______ the employees were aware of the schedule change.",
+      "options": ["nor", "or", "and", "but"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "neither ... nor",
+      "explanation": "The correlative pair is \"neither ... nor\".",
+      "explanationVi": "Cặp liên từ tương quan \"neither ... nor\" (không ... cũng không).",
+      "vocab": [{ "word": "aware", "meaning": "nhận biết, ý thức được", "type": "adjective" }]
+    },
+    {
+      "sentence": "The company plans to _______ its operations into the Southeast Asian market next year.",
+      "options": ["expand", "expense", "expend", "expel"],
+      "correctIndex": 0,
+      "category": "vocabulary",
+      "topic": "word meaning",
+      "explanation": "\"Expand operations\" = grow the business. The others (expense/expend/expel) do not fit.",
+      "explanationVi": "\"Expand operations\" = mở rộng hoạt động. Các từ còn lại không hợp nghĩa.",
+      "vocab": [{ "word": "expand", "meaning": "mở rộng", "type": "verb" }]
+    },
+    {
+      "sentence": "Applicants should send their resumes _______ the address listed in the advertisement.",
+      "options": ["to", "at", "on", "by"],
+      "correctIndex": 0,
+      "category": "collocation",
+      "topic": "send to",
+      "explanation": "\"Send something to + destination/address\".",
+      "explanationVi": "\"Send something to + nơi nhận/địa chỉ\".",
+      "vocab": [{ "word": "applicant", "meaning": "ứng viên", "type": "noun" }]
+    },
+    {
+      "sentence": "The CEO expressed her _______ for the team's hard work during the annual gala.",
+      "options": ["appreciate", "appreciation", "appreciative", "appreciatively"],
+      "correctIndex": 1,
+      "category": "word_form",
+      "topic": "possessive + noun",
+      "explanation": "After the possessive \"her\", a noun is required. \"Appreciation\" = gratitude.",
+      "explanationVi": "Sau sở hữu \"her\" cần danh từ → \"appreciation\" (sự cảm kích, biết ơn).",
+      "vocab": [{ "word": "appreciation", "meaning": "sự cảm kích, đánh giá cao", "type": "noun" }]
+    },
+    {
+      "sentence": "_______ you have any questions, please do not hesitate to contact our support team.",
+      "options": ["Should", "Would", "Could", "Might"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "inverted conditional",
+      "explanation": "\"Should you have any questions\" is an inverted first conditional (= If you have any questions).",
+      "explanationVi": "\"Should you have any questions\" là câu điều kiện đảo ngữ (= If you have any questions).",
+      "vocab": [{ "word": "hesitate", "meaning": "ngần ngại, do dự", "type": "verb" }]
+    },
+    {
+      "sentence": "Visitors may not enter the laboratory _______ a staff member is present.",
+      "options": ["despite", "unless", "during", "whether"],
+      "correctIndex": 1,
+      "category": "grammar",
+      "topic": "conjunction",
+      "explanation": "\"Unless\" (= if ... not) introduces the condition. \"Despite\"/\"during\" take nouns.",
+      "explanationVi": "\"Unless\" (= nếu không) mở đầu mệnh đề điều kiện. \"Despite/during\" đi với danh từ.",
+      "vocab": [{ "word": "laboratory", "meaning": "phòng thí nghiệm", "type": "noun" }]
+    },
+    {
+      "sentence": "The committee found the proposal highly _______.",
+      "options": ["benefit", "beneficial", "beneficially", "benefited"],
+      "correctIndex": 1,
+      "category": "word_form",
+      "topic": "adjective after linking verb",
+      "explanation": "\"found + object + adjective\". \"Beneficial\" describes the proposal.",
+      "explanationVi": "Cấu trúc \"found + tân ngữ + tính từ\" → \"beneficial\" (có lợi).",
+      "vocab": [{ "word": "beneficial", "meaning": "có lợi", "type": "adjective" }]
+    },
+    {
+      "sentence": "The new safety regulations will _______ all factory workers.",
+      "options": ["offer", "affect", "afford", "effect"],
+      "correctIndex": 1,
+      "category": "vocabulary",
+      "topic": "affect vs effect",
+      "explanation": "\"Affect\" (verb) = to have an impact on. \"Effect\" is usually a noun.",
+      "explanationVi": "\"Affect\" (động từ) = ảnh hưởng tới. \"Effect\" thường là danh từ.",
+      "vocab": [{ "word": "affect", "meaning": "ảnh hưởng", "type": "verb" }]
+    },
+    {
+      "sentence": "Employees are entitled _______ ten days of paid leave each year.",
+      "options": ["for", "to", "with", "of"],
+      "correctIndex": 1,
+      "category": "collocation",
+      "topic": "entitled to",
+      "explanation": "Fixed phrase \"be entitled to\" (= have the right to).",
+      "explanationVi": "Cụm cố định \"be entitled to\" (= có quyền hưởng).",
+      "vocab": [{ "word": "paid leave", "meaning": "nghỉ phép có lương", "type": "noun phrase" }]
+    },
+    {
+      "sentence": "The negotiations were conducted _______ over several weeks.",
+      "options": ["patient", "patience", "patiently", "patientness"],
+      "correctIndex": 2,
+      "category": "word_form",
+      "topic": "adverb modifying verb",
+      "explanation": "An adverb modifies the verb \"were conducted\". \"Patiently\" is correct.",
+      "explanationVi": "Cần trạng từ bổ nghĩa cho động từ \"were conducted\" → \"patiently\".",
+      "vocab": [{ "word": "negotiation", "meaning": "cuộc đàm phán", "type": "noun" }]
+    },
+    {
+      "sentence": "This year's profits were much higher _______ last year's.",
+      "options": ["than", "then", "as", "from"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "comparative",
+      "explanation": "The comparative \"higher\" is followed by \"than\".",
+      "explanationVi": "So sánh hơn \"higher\" đi với \"than\".",
+      "vocab": [{ "word": "profit", "meaning": "lợi nhuận", "type": "noun" }]
+    },
+    {
+      "sentence": "Please _______ your seat belts before the plane takes off.",
+      "options": ["attach", "connect", "fasten", "tighten"],
+      "correctIndex": 2,
+      "category": "vocabulary",
+      "topic": "collocation",
+      "explanation": "The standard collocation is \"fasten your seat belt\".",
+      "explanationVi": "Cụm chuẩn là \"fasten your seat belt\" (cài dây an toàn).",
+      "vocab": [{ "word": "fasten", "meaning": "cài, buộc chặt", "type": "verb" }]
+    },
+    {
+      "sentence": "The candidate _______ resume impressed the panel was hired immediately.",
+      "options": ["who", "whose", "which", "whom"],
+      "correctIndex": 1,
+      "category": "grammar",
+      "topic": "possessive relative pronoun",
+      "explanation": "\"Whose\" shows possession (the candidate's resume).",
+      "explanationVi": "\"Whose\" chỉ sở hữu (resume của ứng viên đó).",
+      "vocab": [{ "word": "panel", "meaning": "hội đồng (phỏng vấn)", "type": "noun" }]
+    },
+    {
+      "sentence": "The company's rapid _______ surprised many industry analysts.",
+      "options": ["grow", "grew", "growth", "growing"],
+      "correctIndex": 2,
+      "category": "word_form",
+      "topic": "adjective + noun",
+      "explanation": "After the adjective \"rapid\", a noun is needed. \"Growth\" is correct.",
+      "explanationVi": "Sau tính từ \"rapid\" cần danh từ → \"growth\" (sự tăng trưởng).",
+      "vocab": [{ "word": "analyst", "meaning": "nhà phân tích", "type": "noun" }]
+    },
+    {
+      "sentence": "The manager is in charge _______ the entire sales department.",
+      "options": ["for", "with", "of", "to"],
+      "correctIndex": 2,
+      "category": "collocation",
+      "topic": "in charge of",
+      "explanation": "Fixed phrase \"in charge of\" (= responsible for).",
+      "explanationVi": "Cụm cố định \"in charge of\" (= phụ trách).",
+      "vocab": []
+    },
+    {
+      "sentence": "She improved her presentation skills by _______ regularly.",
+      "options": ["practice", "practiced", "practicing", "to practice"],
+      "correctIndex": 2,
+      "category": "grammar",
+      "topic": "preposition + gerund",
+      "explanation": "After the preposition \"by\", use a gerund. \"Practicing\" is correct.",
+      "explanationVi": "Sau giới từ \"by\" dùng danh động từ → \"practicing\".",
+      "vocab": []
+    },
+    {
+      "sentence": "The firm decided to _______ its outdated computer systems.",
+      "options": ["reply", "replace", "repeat", "reserve"],
+      "correctIndex": 1,
+      "category": "vocabulary",
+      "topic": "word meaning",
+      "explanation": "\"Replace\" = to put a new one in place of an old one.",
+      "explanationVi": "\"Replace\" = thay thế (cái cũ bằng cái mới).",
+      "vocab": [{ "word": "outdated", "meaning": "lỗi thời", "type": "adjective" }]
+    },
+    {
+      "sentence": "The instructions were clear and _______ to follow.",
+      "options": ["ease", "easy", "easily", "easiness"],
+      "correctIndex": 1,
+      "category": "word_form",
+      "topic": "parallel adjective",
+      "explanation": "\"Clear and easy\" — an adjective is needed to match \"clear\".",
+      "explanationVi": "\"Clear and easy\" — cần tính từ song song với \"clear\" → \"easy\".",
+      "vocab": []
+    },
+    {
+      "sentence": "By the time we arrived, the meeting had already _______.",
+      "options": ["begin", "began", "begun", "beginning"],
+      "correctIndex": 2,
+      "category": "grammar",
+      "topic": "past perfect",
+      "explanation": "Past perfect: \"had + past participle\". \"Begun\" is the past participle of \"begin\".",
+      "explanationVi": "Quá khứ hoàn thành: \"had + quá khứ phân từ\" → \"begun\".",
+      "vocab": []
+    },
+    {
+      "sentence": "The results are not consistent _______ our earlier findings.",
+      "options": ["with", "to", "for", "of"],
+      "correctIndex": 0,
+      "category": "collocation",
+      "topic": "consistent with",
+      "explanation": "Fixed phrase \"consistent with\" (= in agreement with).",
+      "explanationVi": "Cụm cố định \"consistent with\" (= phù hợp/nhất quán với).",
+      "vocab": [{ "word": "findings", "meaning": "kết quả/phát hiện", "type": "noun" }]
+    },
+    {
+      "sentence": "All managers must _______ to the new code of conduct.",
+      "options": ["attach", "apply", "adhere", "attend"],
+      "correctIndex": 2,
+      "category": "vocabulary",
+      "topic": "adhere to",
+      "explanation": "\"Adhere to\" = to follow/comply with rules.",
+      "explanationVi": "\"Adhere to\" = tuân thủ (quy định).",
+      "vocab": [{ "word": "code of conduct", "meaning": "quy tắc ứng xử", "type": "noun phrase" }]
+    },
+    {
+      "sentence": "The technician provided a detailed _______ of the problem.",
+      "options": ["analyze", "analyst", "analysis", "analytical"],
+      "correctIndex": 2,
+      "category": "word_form",
+      "topic": "article + adjective + noun",
+      "explanation": "After \"a detailed\", a noun is needed. \"Analysis\" is correct.",
+      "explanationVi": "Sau \"a detailed\" cần danh từ → \"analysis\" (sự phân tích).",
+      "vocab": []
+    },
+    {
+      "sentence": "Each of the applicants _______ required to submit two references.",
+      "options": ["is", "are", "were", "have"],
+      "correctIndex": 0,
+      "category": "grammar",
+      "topic": "subject-verb agreement",
+      "explanation": "\"Each\" takes a singular verb → \"is\".",
+      "explanationVi": "\"Each\" đi với động từ số ít → \"is\".",
+      "vocab": [{ "word": "reference", "meaning": "thư giới thiệu", "type": "noun" }]
+    },
+    {
+      "sentence": "The seminar will focus _______ improving leadership skills.",
+      "options": ["at", "in", "on", "to"],
+      "correctIndex": 2,
+      "category": "collocation",
+      "topic": "focus on",
+      "explanation": "Fixed phrase \"focus on\".",
+      "explanationVi": "Cụm cố định \"focus on\" (tập trung vào).",
+      "vocab": []
+    },
+    {
+      "sentence": "The airline apologized for the _______ caused by the delayed flight.",
+      "options": ["convenience", "inconvenience", "conveniently", "convenient"],
+      "correctIndex": 1,
+      "category": "vocabulary",
+      "topic": "noun with correct meaning",
+      "explanation": "A noun with a negative meaning is needed. \"Inconvenience\" = trouble.",
+      "explanationVi": "Cần danh từ mang nghĩa tiêu cực → \"inconvenience\" (sự bất tiện).",
+      "vocab": [{ "word": "inconvenience", "meaning": "sự bất tiện", "type": "noun" }]
+    },
+    {
+      "sentence": "The accountant will _______ the figures before submitting the report.",
+      "options": ["verification", "verify", "verifiable", "verifiably"],
+      "correctIndex": 1,
+      "category": "word_form",
+      "topic": "modal + base verb",
+      "explanation": "After \"will\", a base verb is needed. \"Verify\" = to check.",
+      "explanationVi": "Sau \"will\" cần động từ nguyên mẫu → \"verify\" (kiểm chứng).",
+      "vocab": [{ "word": "verify", "meaning": "xác minh, kiểm chứng", "type": "verb" }]
+    },
+    {
+      "sentence": "The annual report will _______ by the finance team next week.",
+      "options": ["prepare", "be prepared", "preparing", "prepared"],
+      "correctIndex": 1,
+      "category": "grammar",
+      "topic": "future passive",
+      "explanation": "Future passive: \"will be + past participle\". The report is prepared.",
+      "explanationVi": "Bị động tương lai: \"will be + quá khứ phân từ\" → \"be prepared\".",
+      "vocab": []
+    },
+    {
+      "sentence": "Our products comply _______ international safety standards.",
+      "options": ["to", "with", "for", "on"],
+      "correctIndex": 1,
+      "category": "collocation",
+      "topic": "comply with",
+      "explanation": "Fixed phrase \"comply with\" (= follow rules).",
+      "explanationVi": "Cụm cố định \"comply with\" (= tuân thủ).",
+      "vocab": [{ "word": "comply", "meaning": "tuân thủ", "type": "verb" }]
+    },
+    {
+      "sentence": "The store will _______ a wide range of new products next month.",
+      "options": ["produce", "reduce", "introduce", "conduct"],
+      "correctIndex": 2,
+      "category": "vocabulary",
+      "topic": "word meaning",
+      "explanation": "\"Introduce\" = to bring out/present something new.",
+      "explanationVi": "\"Introduce\" = giới thiệu/ra mắt cái mới.",
+      "vocab": []
+    },
+    {
+      "sentence": "The deadline is _______ tight, so we must work efficiently.",
+      "options": ["extreme", "extremely", "extremity", "extremes"],
+      "correctIndex": 1,
+      "category": "word_form",
+      "topic": "adverb modifying adjective",
+      "explanation": "An adverb modifies the adjective \"tight\". \"Extremely\" is correct.",
+      "explanationVi": "Cần trạng từ bổ nghĩa cho tính từ \"tight\" → \"extremely\".",
+      "vocab": []
+    },
+    {
+      "sentence": "If the order _______ today, it will arrive by Friday.",
+      "options": ["shipped", "ships", "will ship", "has shipped"],
+      "correctIndex": 1,
+      "category": "grammar",
+      "topic": "first conditional",
+      "explanation": "First conditional: \"If + present simple, ... will ...\". \"Ships\" is correct.",
+      "explanationVi": "Câu điều kiện loại 1: \"If + hiện tại đơn, ... will ...\" → \"ships\".",
+      "vocab": []
+    },
+    {
+      "sentence": "The supervisor will _______ the new employees on company procedures.",
+      "options": ["short", "brief", "quick", "narrow"],
+      "correctIndex": 1,
+      "category": "vocabulary",
+      "topic": "word meaning",
+      "explanation": "\"Brief\" (verb) = to give someone instructions or information.",
+      "explanationVi": "\"Brief\" (động từ) = phổ biến/hướng dẫn thông tin cho ai đó.",
+      "vocab": [{ "word": "brief", "meaning": "phổ biến, tóm tắt thông tin", "type": "verb" }]
+    },
+    {
+      "sentence": "The success of the project depends _______ careful planning.",
+      "options": ["of", "on", "in", "at"],
+      "correctIndex": 1,
+      "category": "collocation",
+      "topic": "depend on",
+      "explanation": "Fixed phrase \"depend on\".",
+      "explanationVi": "Cụm cố định \"depend on\" (phụ thuộc vào).",
+      "vocab": []
+    },
+    {
+      "sentence": "The store offers excellent _______ to all of its customers.",
+      "options": ["serve", "servant", "service", "serving"],
+      "correctIndex": 2,
+      "category": "word_form",
+      "topic": "adjective + noun",
+      "explanation": "After the adjective \"excellent\", a noun is needed. \"Service\" is correct.",
+      "explanationVi": "Sau tính từ \"excellent\" cần danh từ → \"service\" (dịch vụ).",
+      "vocab": []
+    },
+    {
+      "sentence": "The team stayed late _______ the project on time.",
+      "options": ["complete", "to complete", "completing", "completed"],
+      "correctIndex": 1,
+      "category": "grammar",
+      "topic": "infinitive of purpose",
+      "explanation": "An infinitive of purpose (\"to complete\") explains why they stayed late.",
+      "explanationVi": "Động từ nguyên mẫu chỉ mục đích (\"to complete\") giải thích lý do ở lại trễ.",
+      "vocab": []
+    }
+  ]
+}

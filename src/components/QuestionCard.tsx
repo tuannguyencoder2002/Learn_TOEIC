@@ -1,6 +1,7 @@
 "use client";
 
 import type { ToeicQuestion } from "@/lib/types";
+import { WordSaver } from "@/components/WordSaver";
 
 const LABELS = ["A", "B", "C", "D"];
 
@@ -10,6 +11,7 @@ interface QuestionCardProps {
   selectedIndex: number | null;
   showResult: boolean;
   onSelect: (index: number) => void;
+  onWordSaved?: () => void;
 }
 
 export function QuestionCard({
@@ -18,20 +20,57 @@ export function QuestionCard({
   selectedIndex,
   showResult,
   onSelect,
+  onWordSaved,
 }: QuestionCardProps) {
+  const part = question.partNumber ?? 5;
+
   return (
     <article className="rounded-2xl border border-border bg-white p-4 shadow-sm sm:p-5">
+      <WordSaver onSaved={onWordSaved}>
       <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-3">
-        <span className="w-fit rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
-          Câu {index + 1}
+        <span className="flex w-fit items-center gap-2">
+          <span className="rounded-full bg-brand px-3 py-1 text-xs font-semibold text-white">
+            Part {part}
+          </span>
+          <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+            Câu {index + 1}
+          </span>
         </span>
         <span className="w-fit rounded-full bg-surface px-3 py-1 text-xs text-brand-muted">
           {question.topic}
         </span>
       </div>
 
-      <p className="break-words text-[15px] leading-relaxed text-brand sm:text-base">
-        {question.sentence}
+      {question.passageText && (
+        <div className="mb-4 rounded-xl border border-border bg-surface p-4">
+          {question.passageTitle && (
+            <div className="mb-2 flex items-center justify-between gap-2">
+              <p className="text-sm font-semibold text-brand">{question.passageTitle}</p>
+              {question.passageType && (
+                <span className="rounded-full bg-white px-2 py-0.5 text-[10px] uppercase tracking-wide text-brand-muted">
+                  {question.passageType}
+                </span>
+              )}
+            </div>
+          )}
+          <p className="whitespace-pre-line break-words text-sm leading-relaxed text-brand">
+            {question.passageText}
+          </p>
+          {question.passageVi && (
+            <details className="mt-3">
+              <summary className="cursor-pointer text-xs font-medium text-accent">
+                Xem bản dịch tiếng Việt
+              </summary>
+              <p className="mt-2 whitespace-pre-line text-xs leading-relaxed text-brand-muted">
+                {question.passageVi}
+              </p>
+            </details>
+          )}
+        </div>
+      )}
+
+      <p className="break-words text-[15px] font-medium leading-relaxed text-brand sm:text-base">
+        {question.questionText ?? question.sentence}
       </p>
 
       <div className="mt-4 grid gap-2 sm:mt-5">
@@ -80,6 +119,7 @@ export function QuestionCard({
           <p className="text-xs leading-relaxed text-brand-muted/80">{question.explanation}</p>
         </div>
       )}
+      </WordSaver>
     </article>
   );
 }

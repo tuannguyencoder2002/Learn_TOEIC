@@ -50,11 +50,23 @@ Nếu PostgreSQL dùng port khác (vd. `5434`), sửa trong `DATABASE_URL`.
 
 | Trang | Mô tả |
 |-------|--------|
-| `/practice` | Luyện Part 5 — marathon 50–70 câu, AI tạo đề |
+| `/practice` | Luyện theo **Part 5 / 6 / 7** (kho đề có sẵn) + marathon 50–70 câu + AI tạo đề |
 | `/import` | Import ảnh sách → AI vision → lưu DB |
 | `/review` | Ôn tập SRS (spaced repetition) |
-| `/vocabulary` | Từ vựng band 650 kiểu Duolingo |
+| `/vocabulary` | Từ vựng band 650 — lọc theo Part 5/6/7 hoặc chủ đề, học kiểu Duolingo |
 | `/listening` | Link nguồn Listening free + Part 1 mẫu |
+
+## Nạp thêm kho đề Part 5/6/7
+
+Kho đề Part 5 (hoàn thành câu), Part 6 (điền đoạn văn) và Part 7 (đọc hiểu) nằm trong
+`scripts/data/part5.json`, `part6.json`, `part7.json`. Thêm câu/đoạn văn vào các file đó rồi chạy:
+
+```bat
+node scripts/seed-content.js
+```
+
+Lệnh này **idempotent** — chạy lại nhiều lần không tạo trùng (Part 5 bỏ qua câu cùng nội dung,
+Part 6/7 bỏ qua đoạn văn cùng tiêu đề), nên cứ thêm đề mới rồi chạy lại để bơm vào database.
 
 ## Điện thoại (cùng WiFi)
 

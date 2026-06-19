@@ -1,19 +1,38 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { VocabDuolingo } from "@/components/VocabDuolingo";
+import { SavedWords } from "@/components/SavedWords";
 import { ALL_TOEIC_650, TOEIC_650_UNITS } from "@/lib/toeic-vocab-650";
 
-type Tab = "learn" | "list";
+type Tab = "learn" | "list" | "saved";
+
+const PART_TABS = [
+  { value: "all", label: "Tất cả Part" },
+  { value: "5", label: "Part 5" },
+  { value: "6", label: "Part 6" },
+  { value: "7", label: "Part 7" },
+];
 
 export default function VocabularyPage() {
   const [tab, setTab] = useState<Tab>("learn");
   const [topicFilter, setTopicFilter] = useState<string>("all");
+  const [partFilter, setPartFilter] = useState<string>("all");
+
+  // Mở sẵn tab "Cần nhớ" khi vào từ link /vocabulary?tab=saved
+  useEffect(() => {
+    const t = new URLSearchParams(window.location.search).get("tab");
+    if (t === "saved" || t === "list" || t === "learn") setTab(t);
+  }, []);
 
   const filtered = useMemo(() => {
-    if (topicFilter === "all") return ALL_TOEIC_650;
-    return ALL_TOEIC_650.filter((w) => w.topic === topicFilter);
-  }, [topicFilter]);
+    return ALL_TOEIC_650.filter((w) => {
+      const okTopic = topicFilter === "all" || w.topic === topicFilter;
+      const okPart =
+        partFilter === "all" || (w.parts ?? []).includes(Number(partFilter));
+      return okTopic && okPart;
+    });
+  }, [topicFilter, partFilter]);
 
   const topics = useMemo(() => {
     const set = new Set(ALL_TOEIC_650.map((w) => w.topic));
@@ -26,7 +45,8 @@ export default function VocabularyPage() {
         <p className="text-sm text-accent">TOEIC Band 650</p>
         <h1 className="text-xl font-bold text-brand sm:text-2xl">Từ vựng & cụm từ</h1>
         <p className="mt-2 text-sm text-brand-muted">
-          48 từ business phổ biến (Office, HR, Finance, Business) · học kiểu Duolingo
+          {ALL_TOEIC_650.length} từ business phổ biến · lọc theo Part 5/6/7 hoặc chủ đề · học
+          kiểu Duolingo
         </p>
       </div>
 
@@ -53,12 +73,42 @@ export default function VocabularyPage() {
         >
           📚 Danh sách
         </button>
+        <button
+          type="button"
+          onClick={() => setTab("saved")}
+          className={`touch-target flex-1 rounded-lg px-3 py-2.5 text-sm font-medium transition sm:px-4 ${
+            tab === "saved"
+              ? "bg-brand text-white"
+              : "text-brand-muted hover:text-brand"
+          }`}
+        >
+          📌 Cần nhớ
+        </button>
       </div>
 
-      {tab === "learn" ? (
+      {tab === "saved" ? (
+        <SavedWords />
+      ) : tab === "learn" ? (
         <VocabDuolingo />
       ) : (
         <div className="space-y-4">
+          <div className="flex flex-wrap gap-2">
+            {PART_TABS.map((p) => (
+              <button
+                key={p.value}
+                type="button"
+                onClick={() => setPartFilter(p.value)}
+                className={`rounded-full px-3 py-1 text-xs font-semibold transition ${
+                  partFilter === p.value
+                    ? "bg-brand text-white"
+                    : "bg-surface text-brand-muted hover:text-brand"
+                }`}
+              >
+                {p.label}
+              </button>
+            ))}
+          </div>
+
           <div className="flex flex-wrap gap-2">
             {topics.map((t) => (
               <button

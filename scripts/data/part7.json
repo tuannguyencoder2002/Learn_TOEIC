@@ -1,0 +1,603 @@
+{
+  "setTitle": "Part 7 - Kho đề đọc hiểu (Reading Comprehension)",
+  "part": 7,
+  "passages": [
+    {
+      "title": "GreenLeaf Landscaping — Now Hiring",
+      "passageType": "advertisement",
+      "passageText": "GreenLeaf Landscaping — Now Hiring\n\nGreenLeaf Landscaping is seeking a full-time Garden Designer to join our growing team in Portland. The ideal candidate will have at least three years of experience in landscape design and a strong knowledge of native plants. A degree in horticulture is preferred but not required.\n\nResponsibilities include meeting with clients, creating design plans, and supervising installation crews. We offer competitive pay, health benefits, and paid vacation. All applicants must hold a valid driver's license.\n\nTo apply, please send your resume and portfolio to careers@greenleaf.com by April 15. Interviews will begin the following week.",
+      "passageVi": "Quảng cáo tuyển dụng của GreenLeaf Landscaping: cần một Nhà thiết kế sân vườn toàn thời gian tại Portland, tối thiểu 3 năm kinh nghiệm, hiểu biết về cây bản địa; bằng làm vườn là lợi thế nhưng không bắt buộc. Công việc gồm gặp khách, lập bản thiết kế, giám sát đội thi công. Phúc lợi tốt. Bắt buộc có bằng lái xe. Gửi CV và portfolio tới careers@greenleaf.com trước 15/4.",
+      "questions": [
+        {
+          "questionText": "What position is being advertised?",
+          "options": ["A garden designer", "A horticulture teacher", "An installation crew member", "A marketing manager"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "main idea",
+          "explanation": "The advertisement is seeking a full-time Garden Designer.",
+          "explanationVi": "Mẩu tin tuyển một Nhà thiết kế sân vườn (Garden Designer) toàn thời gian."
+        },
+        {
+          "questionText": "What is required of all applicants?",
+          "options": ["A degree in horticulture", "A valid driver's license", "Five years of experience", "A teaching certificate"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "A degree is only preferred, but a valid driver's license is required of all applicants.",
+          "explanationVi": "Bằng làm vườn chỉ là lợi thế, còn bằng lái xe hợp lệ là bắt buộc với mọi ứng viên."
+        },
+        {
+          "questionText": "By when must applications be submitted?",
+          "options": ["April 15", "The following week", "Within three years", "March 15"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Applications must be sent by April 15; interviews begin the following week.",
+          "explanationVi": "Hồ sơ phải gửi trước ngày 15/4; phỏng vấn bắt đầu tuần kế tiếp."
+        }
+      ]
+    },
+    {
+      "title": "Meeting Schedule Change",
+      "passageType": "email",
+      "passageText": "From: Linda Crawford\nTo: Project Team\nSubject: Schedule Change\n\nHi everyone,\n\nI'm writing to let you know that our weekly project meeting, originally planned for Thursday at 2 P.M., has been moved to Friday at 10 A.M. The change is due to a conflict with the client presentation on Thursday afternoon.\n\nPlease update your calendars accordingly. We will meet in Conference Room B as usual. If you are unable to attend, let me know before Friday morning so that I can share the notes with you afterward.\n\nI would also like each of you to bring a brief progress update on your assigned tasks.\n\nBest,\nLinda",
+      "passageVi": "Email của Linda Crawford gửi nhóm dự án: cuộc họp tuần dời từ thứ Năm 2 giờ chiều sang thứ Sáu 10 giờ sáng vì trùng buổi thuyết trình với khách hàng chiều thứ Năm. Vẫn họp ở phòng B. Ai không dự được hãy báo trước sáng thứ Sáu để được gửi biên bản. Mỗi người mang theo bản cập nhật tiến độ công việc.",
+      "questions": [
+        {
+          "questionText": "Why was the meeting rescheduled?",
+          "options": ["A conference room was unavailable", "It conflicted with a client presentation", "Several members were on vacation", "The project was canceled"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The email states the change is due to a conflict with the client presentation.",
+          "explanationVi": "Email nêu lý do dời họp là trùng với buổi thuyết trình cho khách hàng."
+        },
+        {
+          "questionText": "What are team members asked to bring?",
+          "options": ["A progress update on their tasks", "A copy of the client presentation", "Lunch for the team", "A new project proposal"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Linda asks each person to bring a brief progress update on their tasks.",
+          "explanationVi": "Linda yêu cầu mỗi người mang bản cập nhật tiến độ công việc của mình."
+        },
+        {
+          "questionText": "What should employees do if they cannot attend?",
+          "options": ["Cancel the meeting", "Reschedule with the client", "Inform Linda before Friday morning", "Reserve Conference Room B"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Those who cannot attend should let Linda know before Friday morning.",
+          "explanationVi": "Ai không dự được nên báo cho Linda trước sáng thứ Sáu."
+        }
+      ]
+    },
+    {
+      "title": "Riverside Community Center Notice",
+      "passageType": "notice",
+      "passageText": "Notice to All Members — Riverside Community Center\n\nPlease be advised that the swimming pool will be closed for routine maintenance from Monday, July 7 to Wednesday, July 9. The pool will reopen on Thursday, July 10 at 6 A.M.\n\nDuring this period, all other facilities, including the fitness center and the basketball court, will remain open during regular hours. Members who have booked swimming lessons on these dates will be contacted directly to arrange alternative times.\n\nWe apologize for any inconvenience and thank you for your understanding.",
+      "passageVi": "Thông báo cho hội viên Trung tâm cộng đồng Riverside: hồ bơi đóng để bảo trì định kỳ từ thứ Hai 7/7 đến thứ Tư 9/7, mở lại thứ Năm 10/7 lúc 6 giờ sáng. Trong thời gian này, các khu khác (phòng gym, sân bóng rổ) vẫn mở giờ bình thường. Hội viên đã đặt lớp học bơi sẽ được liên hệ để sắp lịch khác. Xin lỗi vì bất tiện.",
+      "questions": [
+        {
+          "questionText": "What is the main purpose of the notice?",
+          "options": ["To announce a pool closure", "To advertise swimming lessons", "To welcome new members", "To extend opening hours"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "main idea",
+          "explanation": "The notice informs members that the swimming pool will be closed for maintenance.",
+          "explanationVi": "Thông báo cho biết hồ bơi sẽ đóng để bảo trì."
+        },
+        {
+          "questionText": "When will the pool reopen?",
+          "options": ["July 7", "July 9", "July 10", "July 6"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The pool will reopen on Thursday, July 10 at 6 A.M.",
+          "explanationVi": "Hồ bơi mở lại vào thứ Năm ngày 10/7 lúc 6 giờ sáng."
+        },
+        {
+          "questionText": "What will happen to members who booked swimming lessons?",
+          "options": ["Their lessons will be canceled permanently", "They will be contacted to reschedule", "They will receive a refund", "They must use the basketball court"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Members with booked lessons will be contacted to arrange alternative times.",
+          "explanationVi": "Hội viên đã đặt lớp sẽ được liên hệ để sắp xếp thời gian khác."
+        }
+      ]
+    },
+    {
+      "title": "Brightstar Foods Opens New Distribution Center",
+      "passageType": "article",
+      "passageText": "Brightstar Foods Opens New Distribution Center\n\nBrightstar Foods announced today that it has opened a new distribution center in Columbus, Ohio. The facility, which spans 200,000 square feet, will allow the company to deliver products more quickly to customers throughout the Midwest region.\n\nThe center is expected to create approximately 150 new jobs over the next year. \"This investment reflects our commitment to growth and to serving our customers better,\" said CEO Maria Gonzalez during the opening ceremony.\n\nBrightstar Foods, founded in 1998, currently operates five distribution centers across the country. The company plans to open two more facilities by 2027.",
+      "passageVi": "Bài báo: Brightstar Foods khai trương trung tâm phân phối mới ở Columbus, Ohio, rộng 200.000 foot vuông, giúp giao hàng nhanh hơn cho khu vực Trung Tây. Dự kiến tạo khoảng 150 việc làm trong năm tới. CEO Maria Gonzalez nói đây là khoản đầu tư thể hiện cam kết tăng trưởng. Công ty thành lập năm 1998, hiện có 5 trung tâm và dự định mở thêm 2 nữa trước năm 2027.",
+      "questions": [
+        {
+          "questionText": "What did Brightstar Foods recently do?",
+          "options": ["Opened a new distribution center", "Hired a new CEO", "Closed a factory in Ohio", "Launched a new product line"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "main idea",
+          "explanation": "The article announces that the company opened a new distribution center in Columbus.",
+          "explanationVi": "Bài báo thông báo công ty mở một trung tâm phân phối mới ở Columbus."
+        },
+        {
+          "questionText": "How many new jobs is the center expected to create?",
+          "options": ["About 150", "About 200,000", "Five", "Two"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The center is expected to create approximately 150 new jobs over the next year.",
+          "explanationVi": "Trung tâm dự kiến tạo khoảng 150 việc làm trong năm tới."
+        },
+        {
+          "questionText": "How many distribution centers does the company currently operate?",
+          "options": ["Two", "Five", "Six", "One"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The company currently operates five distribution centers across the country.",
+          "explanationVi": "Công ty hiện vận hành năm trung tâm phân phối trên toàn quốc."
+        },
+        {
+          "questionText": "What does the company plan to do by 2027?",
+          "options": ["Open two more facilities", "Move its headquarters", "Replace its CEO", "Expand overseas"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The company plans to open two more facilities by 2027.",
+          "explanationVi": "Công ty dự định mở thêm hai cơ sở nữa trước năm 2027."
+        }
+      ]
+    },
+    {
+      "title": "Customer Review — TimeSaver Coffee Maker",
+      "passageType": "review",
+      "passageText": "Customer Review — TimeSaver Coffee Maker (4 out of 5 stars)\n\nI purchased the TimeSaver Coffee Maker two months ago, and overall I am very satisfied. The machine brews a full pot in under five minutes, which is perfect for busy mornings. The built-in timer is especially convenient — I can wake up to freshly made coffee every day.\n\nThe only drawback is that the water tank is a bit small, so I have to refill it fairly often. Cleaning is easy, however, and the customer service team responded quickly when I had a question about the warranty.\n\nI would recommend this product to anyone looking for a reliable and affordable coffee maker.",
+      "passageVi": "Đánh giá của khách hàng cho máy pha cà phê TimeSaver (4/5 sao): nhìn chung rất hài lòng, pha xong một bình trong chưa tới 5 phút, hẹn giờ tiện lợi nên sáng dậy có cà phê nóng. Nhược điểm duy nhất là bình nước hơi nhỏ phải châm thường xuyên. Dễ vệ sinh, bộ phận CSKH phản hồi nhanh về bảo hành. Người viết khuyên dùng cho ai cần máy bền và giá hợp lý.",
+      "questions": [
+        {
+          "questionText": "What did the reviewer like most about the product?",
+          "options": ["Its large water tank", "Its convenient built-in timer", "Its low price", "Its compact size"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The reviewer highlights the built-in timer as especially convenient.",
+          "explanationVi": "Người đánh giá nhấn mạnh bộ hẹn giờ tích hợp là điểm đặc biệt tiện lợi."
+        },
+        {
+          "questionText": "What is the one disadvantage mentioned?",
+          "options": ["The water tank is small", "It is difficult to clean", "It brews coffee slowly", "The warranty is short"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The only drawback mentioned is that the water tank is a bit small.",
+          "explanationVi": "Nhược điểm duy nhất được nêu là bình chứa nước hơi nhỏ."
+        },
+        {
+          "questionText": "What can be inferred about the customer service team?",
+          "options": ["They were unhelpful", "They responded quickly", "They charged an extra fee", "They refused to answer"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "inference",
+          "explanation": "The reviewer notes the team responded quickly, implying good service.",
+          "explanationVi": "Người đánh giá cho biết đội ngũ phản hồi nhanh → suy ra dịch vụ tốt."
+        }
+      ]
+    },
+    {
+      "title": "Riverton Media — Marketing Coordinator",
+      "passageType": "advertisement",
+      "passageText": "Riverton Media — Marketing Coordinator (Full-Time)\n\nRiverton Media is looking for an enthusiastic Marketing Coordinator to support our growing communications team. The successful applicant will assist in planning campaigns, managing social media accounts, and preparing monthly performance reports.\n\nCandidates should have a bachelor's degree in marketing or a related field and at least two years of relevant experience. Strong writing skills and familiarity with design software are essential. Experience in the publishing industry is an advantage.\n\nWe offer a competitive salary, flexible working hours, and opportunities for professional development. Interested candidates should submit a cover letter and resume through our website by May 5. Only shortlisted applicants will be contacted for an interview.",
+      "passageVi": "Quảng cáo tuyển Điều phối viên Marketing toàn thời gian tại Riverton Media: hỗ trợ lập kế hoạch chiến dịch, quản lý mạng xã hội, làm báo cáo hằng tháng. Yêu cầu bằng cử nhân marketing và tối thiểu 2 năm kinh nghiệm, kỹ năng viết tốt, biết phần mềm thiết kế. Nộp thư xin việc và CV qua website trước 5/5; chỉ ứng viên vào vòng trong mới được liên hệ.",
+      "questions": [
+        {
+          "questionText": "What is one main responsibility of the position?",
+          "options": ["Designing the company website", "Managing social media accounts", "Hiring new team members", "Training the sales staff"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The ad lists managing social media accounts as a key responsibility.",
+          "explanationVi": "Mẩu tin nêu quản lý các tài khoản mạng xã hội là một nhiệm vụ chính."
+        },
+        {
+          "questionText": "What is required of candidates?",
+          "options": ["A degree in publishing", "Five years of management experience", "At least two years of relevant experience", "A design certificate"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Candidates must have at least two years of relevant experience.",
+          "explanationVi": "Ứng viên cần có ít nhất hai năm kinh nghiệm liên quan."
+        },
+        {
+          "questionText": "How should candidates apply?",
+          "options": ["By visiting the office", "By calling the HR department", "Through the company website", "By emailing the manager"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Applicants should submit materials through the company website.",
+          "explanationVi": "Ứng viên nộp hồ sơ qua website của công ty."
+        },
+        {
+          "questionText": "What is indicated about the hiring process?",
+          "options": ["All applicants will be interviewed", "Interviews will be held on May 5", "A design test is required", "Only shortlisted applicants will be contacted"],
+          "correctIndex": 3,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Only shortlisted applicants will be contacted for an interview.",
+          "explanationVi": "Chỉ những ứng viên được chọn vào vòng trong mới được liên hệ phỏng vấn."
+        }
+      ]
+    },
+    {
+      "title": "Maple Kitchen — Order Confirmation",
+      "passageType": "email",
+      "passageText": "From: orders@maplekitchen.com\nTo: jwong@email.com\nSubject: Your Order #48217\n\nDear Ms. Wong,\n\nThank you for shopping with Maple Kitchen. We are pleased to confirm that your order has been received and is now being processed. Your items will be shipped within two business days.\n\nOrder summary:\n- Ceramic mixing bowl set — $34.99\n- Stainless steel whisk — $9.99\n- Silicone baking mat (2-pack) — $14.99\n\nA shipping confirmation with a tracking number will be sent once your package leaves our warehouse. Standard delivery usually takes three to five business days.\n\nIf you need to change your shipping address, please contact us within 24 hours. Thank you for choosing Maple Kitchen.",
+      "passageVi": "Email xác nhận đơn hàng #48217 của Maple Kitchen gửi bà Wong: đơn đã nhận và đang xử lý, sẽ giao trong 2 ngày làm việc. Có liệt kê các món hàng. Khi hàng rời kho sẽ gửi mã vận đơn; giao tiêu chuẩn 3-5 ngày. Nếu cần đổi địa chỉ, liên hệ trong vòng 24 giờ.",
+      "questions": [
+        {
+          "questionText": "Why was the email sent?",
+          "options": ["To request a payment", "To confirm an order", "To advertise a sale", "To apologize for a delay"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "main idea",
+          "explanation": "The email confirms that Ms. Wong's order has been received and is being processed.",
+          "explanationVi": "Email xác nhận đơn hàng của bà Wong đã được nhận và đang xử lý."
+        },
+        {
+          "questionText": "What will Ms. Wong receive when the package ships?",
+          "options": ["A discount coupon", "A catalog", "A tracking number", "A refund"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "A shipping confirmation with a tracking number will be sent when the package leaves.",
+          "explanationVi": "Khi hàng rời kho, bà sẽ nhận xác nhận giao hàng kèm mã vận đơn."
+        },
+        {
+          "questionText": "What should Ms. Wong do if she wants to change her address?",
+          "options": ["Visit the warehouse", "Contact the company within 24 hours", "Reply within five days", "Cancel the order"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "She should contact the company within 24 hours to change the address.",
+          "explanationVi": "Bà cần liên hệ công ty trong vòng 24 giờ để đổi địa chỉ."
+        }
+      ]
+    },
+    {
+      "title": "East Tower Elevator Maintenance",
+      "passageType": "notice",
+      "passageText": "NOTICE — Elevator Maintenance\n\nPlease be informed that the elevators in the East Tower will undergo scheduled maintenance on Saturday, August 9, from 7 A.M. to 1 P.M. During this time, the elevators will be out of service.\n\nResidents and visitors are kindly asked to use the stairwells located at both ends of each floor. The elevators in the West Tower will operate as normal and may be used as an alternative.\n\nWe apologize for any inconvenience this may cause and appreciate your patience. For urgent assistance during the maintenance period, please contact building security at extension 200.",
+      "passageVi": "Thông báo bảo trì thang máy: thang máy tòa East Tower bảo trì thứ Bảy 9/8 từ 7h đến 13h, ngưng hoạt động. Mọi người dùng cầu thang bộ hai đầu mỗi tầng, hoặc thang máy tòa West Tower vẫn chạy bình thường. Cần hỗ trợ khẩn, gọi bảo vệ tòa nhà số máy lẻ 200.",
+      "questions": [
+        {
+          "questionText": "What is the purpose of the notice?",
+          "options": ["To advertise apartments", "To announce elevator maintenance", "To report a power outage", "To introduce a new building"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "main idea",
+          "explanation": "The notice announces scheduled elevator maintenance in the East Tower.",
+          "explanationVi": "Thông báo cho biết thang máy East Tower được bảo trì theo lịch."
+        },
+        {
+          "questionText": "What are people asked to do during the maintenance?",
+          "options": ["Avoid the building entirely", "Park in a different lot", "Use the stairwells or the West Tower elevators", "Contact the city council"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "People are asked to use the stairwells or the West Tower elevators.",
+          "explanationVi": "Mọi người được yêu cầu dùng cầu thang bộ hoặc thang máy tòa West Tower."
+        },
+        {
+          "questionText": "Who should be contacted for urgent help?",
+          "options": ["The city office", "Building security at extension 200", "The maintenance company", "The East Tower manager"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Building security can be reached at extension 200 for urgent assistance.",
+          "explanationVi": "Liên hệ bảo vệ tòa nhà ở số máy lẻ 200 để được hỗ trợ khẩn cấp."
+        }
+      ]
+    },
+    {
+      "title": "Lakeside Bookstore Grand Opening",
+      "passageType": "article",
+      "passageText": "Lakeside Bookstore Celebrates Grand Opening\n\nLakeside Bookstore opened its doors to the public last Saturday with a day of festivities. The new store, located in the heart of downtown Bellview, offers a wide selection of books, stationery, and locally made gifts.\n\nTo mark the occasion, the store hosted readings by three local authors and offered a 20 percent discount on all purchases. Owner Daniel Pak said he hopes the store will become a gathering place for the community. \"We want Lakeside to be more than a bookstore,\" he said. \"We plan to host workshops, book clubs, and children's story hours.\"\n\nThe store will be open daily from 9 A.M. to 8 P.M. A café serving coffee and pastries is scheduled to open inside the store next month.",
+      "passageVi": "Bài báo: Hiệu sách Lakeside khai trương thứ Bảy tuần trước ở trung tâm Bellview, bán sách, văn phòng phẩm và quà địa phương. Dịp khai trương có buổi đọc của ba tác giả địa phương và giảm 20% mọi mặt hàng. Chủ tiệm Daniel Pak muốn nơi đây thành điểm gặp gỡ cộng đồng, dự định mở workshop, câu lạc bộ sách, giờ kể chuyện cho trẻ. Mở 9h-20h hằng ngày; tháng sau khai trương quán café bên trong.",
+      "questions": [
+        {
+          "questionText": "What event does the article describe?",
+          "options": ["A book fair", "A bookstore's grand opening", "An author's award", "A library renovation"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "main idea",
+          "explanation": "The article describes the grand opening of Lakeside Bookstore.",
+          "explanationVi": "Bài báo mô tả lễ khai trương hiệu sách Lakeside."
+        },
+        {
+          "questionText": "What was offered during the opening day?",
+          "options": ["Free books", "A cooking class", "A 20 percent discount", "Free coffee"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The store offered a 20 percent discount on all purchases that day.",
+          "explanationVi": "Hôm đó cửa hàng giảm 20% cho mọi giao dịch."
+        },
+        {
+          "questionText": "What does the owner plan to do in the future?",
+          "options": ["Open a second location", "Sell the business", "Move downtown", "Host workshops and book clubs"],
+          "correctIndex": 3,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The owner plans to host workshops, book clubs, and story hours.",
+          "explanationVi": "Chủ tiệm dự định tổ chức workshop, câu lạc bộ sách và giờ kể chuyện."
+        },
+        {
+          "questionText": "What is scheduled to open next month?",
+          "options": ["A café inside the store", "A children's library", "A parking garage", "A second store"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "A café serving coffee and pastries will open inside the store next month.",
+          "explanationVi": "Tháng sau, một quán café trong cửa hàng sẽ mở cửa."
+        }
+      ]
+    },
+    {
+      "title": "New Lunch Break Policy",
+      "passageType": "memo",
+      "passageText": "MEMO\nTo: All Employees\nFrom: Human Resources\nDate: October 3\nRe: New Lunch Break Policy\n\nBeginning Monday, October 13, the lunch break will be extended from 45 minutes to one hour. This change is intended to give staff more time to rest and recharge during the workday.\n\nTo accommodate the longer break, the office will now close at 5:30 P.M. instead of 5:15 P.M. Employees are reminded to record their break times accurately in the time-tracking system.\n\nIf you have any concerns about how this affects your schedule, please speak with your supervisor. We believe this change will contribute to a healthier and more productive work environment.",
+      "passageVi": "Bản ghi nhớ từ phòng Nhân sự: từ thứ Hai 13/10, giờ nghỉ trưa kéo dài từ 45 phút lên 1 tiếng để nhân viên nghỉ ngơi nhiều hơn. Do đó văn phòng đóng cửa lúc 17h30 thay vì 17h15. Nhân viên nhớ ghi giờ nghỉ chính xác trong hệ thống chấm công. Có thắc mắc thì gặp cấp trên.",
+      "questions": [
+        {
+          "questionText": "What is the main purpose of the memo?",
+          "options": ["To change the dress code", "To announce a longer lunch break", "To introduce a new manager", "To reduce working hours permanently"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "main idea",
+          "explanation": "The memo announces that the lunch break will be extended to one hour.",
+          "explanationVi": "Bản ghi nhớ thông báo giờ nghỉ trưa được kéo dài thành một tiếng."
+        },
+        {
+          "questionText": "When does the new policy take effect?",
+          "options": ["October 3", "September 30", "October 13", "November 1"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The new policy begins on Monday, October 13.",
+          "explanationVi": "Chính sách mới bắt đầu từ thứ Hai ngày 13/10."
+        },
+        {
+          "questionText": "What time will the office now close?",
+          "options": ["5:15 P.M.", "6:00 P.M.", "5:00 P.M.", "5:30 P.M."],
+          "correctIndex": 3,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The office will now close at 5:30 P.M. instead of 5:15 P.M.",
+          "explanationVi": "Văn phòng nay đóng cửa lúc 17h30 thay vì 17h15."
+        },
+        {
+          "questionText": "What are employees reminded to do?",
+          "options": ["Record break times accurately", "Work on weekends", "Clock in earlier", "Skip lunch"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Employees are reminded to record their break times accurately.",
+          "explanationVi": "Nhân viên được nhắc ghi lại giờ nghỉ một cách chính xác."
+        }
+      ]
+    },
+    {
+      "title": "Text Message — Sample Preparation",
+      "passageType": "text message",
+      "passageText": "Marcus Reed (9:02 A.M.): Hi Tina, are the samples for the Henderson account ready?\nTina Lopez (9:05 A.M.): Almost. The printer jammed this morning, so I'm running about an hour behind.\nMarcus Reed (9:06 A.M.): No problem. The client meeting isn't until 2 P.M.\nTina Lopez (9:07 A.M.): Great. I'll have them on your desk by noon. Should I print extra copies?\nMarcus Reed (9:08 A.M.): Yes, please print five sets. Two clients are bringing colleagues.\nTina Lopez (9:09 A.M.): Will do. I'll also prepare a digital version just in case.",
+      "passageVi": "Đoạn tin nhắn: Marcus hỏi Tina mẫu cho khách Henderson xong chưa. Tina nói gần xong nhưng máy in kẹt giấy sáng nay nên trễ khoảng 1 tiếng. Marcus bảo không sao vì 2h chiều mới họp. Tina hứa để lên bàn trước trưa và hỏi in thêm không. Marcus nhờ in 5 bộ vì hai khách dẫn theo đồng nghiệp. Tina sẽ làm thêm bản số hóa dự phòng.",
+      "questions": [
+        {
+          "questionText": "Why is Tina behind schedule?",
+          "options": ["She arrived late", "The printer jammed", "The client canceled", "The samples were lost"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Tina is behind because the printer jammed that morning.",
+          "explanationVi": "Tina bị trễ vì máy in kẹt giấy vào buổi sáng."
+        },
+        {
+          "questionText": "At 9:06 A.M., what does Marcus mean when he writes \"No problem\"?",
+          "options": ["He will fix the printer", "He will reschedule the meeting", "The delay is acceptable because the meeting is later", "He does not need the samples"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "inference",
+          "explanation": "He means the delay is fine since the client meeting is not until 2 P.M.",
+          "explanationVi": "Ý anh ấy là trễ một chút cũng được vì 2h chiều mới họp với khách."
+        },
+        {
+          "questionText": "How many sets does Marcus ask Tina to print?",
+          "options": ["Two", "One", "Five", "Three"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Marcus asks Tina to print five sets.",
+          "explanationVi": "Marcus nhờ Tina in năm bộ."
+        }
+      ]
+    },
+    {
+      "title": "Catering Inquiry and Reply (Double Passage)",
+      "passageType": "double email",
+      "passageText": "Email 1\nFrom: Karen Mills, Event Coordinator\nTo: Anthony Reed\nSubject: Catering for Annual Banquet\n\nDear Mr. Reed,\n\nWe are organizing our company's annual banquet on November 18 and expect around 120 guests. We would like to request a quote for a three-course dinner. Several of our guests have dietary restrictions, so we will need at least 20 vegetarian meals. Could you also let us know whether you provide table service or buffet style? We look forward to your response.\n\nBest regards,\nKaren Mills\n\n----------\n\nEmail 2\nFrom: Anthony Reed, Greenfield Catering\nTo: Karen Mills\nSubject: RE: Catering for Annual Banquet\n\nDear Ms. Mills,\n\nThank you for considering Greenfield Catering. For 120 guests, our three-course dinner is $45 per person, which includes table service. We can easily accommodate vegetarian and other dietary needs at no extra charge. If you prefer a buffet, the price is reduced to $38 per person. Please note that we require a 30 percent deposit to confirm the booking. I would be happy to arrange a tasting session before you decide.\n\nSincerely,\nAnthony Reed",
+      "passageVi": "Bài đọc kép: (Email 1) Karen Mills xin báo giá tiệc tối 3 món cho khoảng 120 khách dịp tiệc thường niên 18/11, cần ít nhất 20 suất chay, hỏi phục vụ tại bàn hay tự chọn (buffet). (Email 2) Anthony Reed của Greenfield Catering báo $45/người gồm phục vụ tại bàn, đáp ứng suất chay miễn phí; nếu buffet thì $38/người. Cần đặt cọc 30% để chốt, và mời dùng thử món trước khi quyết.",
+      "questions": [
+        {
+          "questionText": "What is the purpose of Ms. Mills's email?",
+          "options": ["To request a catering quote", "To cancel an order", "To complain about a meal", "To confirm a booking"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "main idea",
+          "explanation": "Ms. Mills writes to request a quote for a three-course dinner.",
+          "explanationVi": "Bà Mills viết thư để xin báo giá bữa tối ba món."
+        },
+        {
+          "questionText": "How many vegetarian meals does Ms. Mills require?",
+          "options": ["120", "30", "At least 20", "45"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "She states she will need at least 20 vegetarian meals.",
+          "explanationVi": "Bà nói cần ít nhất 20 suất ăn chay."
+        },
+        {
+          "questionText": "According to Mr. Reed, what is included in the $45 per person price?",
+          "options": ["A deposit", "Table service", "Transportation", "Decorations"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The $45 per person price includes table service.",
+          "explanationVi": "Giá $45/người đã bao gồm phục vụ tại bàn."
+        },
+        {
+          "questionText": "What must Ms. Mills do to confirm the booking?",
+          "options": ["Choose a buffet", "Attend a tasting", "Pay a 30 percent deposit", "Sign a contract in person"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "A 30 percent deposit is required to confirm the booking.",
+          "explanationVi": "Cần đặt cọc 30% để xác nhận đặt tiệc."
+        },
+        {
+          "questionText": "What does Mr. Reed offer to arrange?",
+          "options": ["A discount", "A tasting session", "Free delivery", "A second event"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Mr. Reed offers to arrange a tasting session before she decides.",
+          "explanationVi": "Ông Reed đề nghị sắp xếp một buổi dùng thử món trước khi bà quyết định."
+        }
+      ]
+    },
+    {
+      "title": "FitZone Gym — Membership Plans",
+      "passageType": "web page",
+      "passageText": "FitZone Gym — Membership Plans\n\nJoin FitZone today and take the first step toward a healthier lifestyle! We offer three flexible membership options to suit your needs:\n\n- Basic ($25/month): Access to gym equipment and locker rooms.\n- Plus ($40/month): Includes Basic features plus unlimited group fitness classes.\n- Premium ($60/month): Includes Plus features plus two personal training sessions each month.\n\nAll new members receive a free fitness assessment and a one-week trial of the Premium plan. Memberships can be paused for up to two months per year at no charge. Sign up online or visit any of our five locations. Cancel anytime with 30 days' notice.",
+      "passageVi": "Trang web FitZone Gym giới thiệu 3 gói: Basic $25 (thiết bị + phòng thay đồ), Plus $40 (thêm lớp tập nhóm không giới hạn), Premium $60 (thêm 2 buổi PT/tháng). Hội viên mới được đánh giá thể lực miễn phí và dùng thử gói Premium 1 tuần. Có thể tạm dừng tối đa 2 tháng/năm miễn phí. Đăng ký online hoặc tới 5 cơ sở. Hủy bất cứ lúc nào, báo trước 30 ngày.",
+      "questions": [
+        {
+          "questionText": "What does the Plus plan include that the Basic plan does not?",
+          "options": ["Personal training", "A swimming pool", "Group fitness classes", "A locker room"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The Plus plan adds unlimited group fitness classes over the Basic plan.",
+          "explanationVi": "Gói Plus có thêm lớp tập nhóm không giới hạn so với gói Basic."
+        },
+        {
+          "questionText": "What do all new members receive?",
+          "options": ["A free water bottle", "A free fitness assessment", "Three months free", "A personal trainer"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "All new members receive a free fitness assessment and a one-week Premium trial.",
+          "explanationVi": "Hội viên mới được đánh giá thể lực miễn phí và dùng thử gói Premium 1 tuần."
+        },
+        {
+          "questionText": "What is stated about canceling a membership?",
+          "options": ["It is not allowed", "It costs a fee", "It requires 30 days' notice", "It must be done in person"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Members can cancel anytime with 30 days' notice.",
+          "explanationVi": "Hội viên có thể hủy bất cứ lúc nào với thông báo trước 30 ngày."
+        }
+      ]
+    },
+    {
+      "title": "Thank-You Letter to a Donor",
+      "passageType": "letter",
+      "passageText": "Dear Mr. Sullivan,\n\nOn behalf of the Hartwell Children's Library, I would like to express our sincere gratitude for your generous donation of $5,000. Your contribution will directly support our after-school reading program, which serves more than 200 children each week.\n\nThanks to supporters like you, we will be able to purchase new books, upgrade our computer lab, and expand our weekend story-time sessions. We would be honored to recognize your contribution on our donor wall and in our annual newsletter.\n\nPlease join us at our spring open house on April 22, where you can see firsthand the impact of your support. An official receipt for your tax records is enclosed.\n\nWith appreciation,\nEleanor Vance, Director",
+      "passageVi": "Thư cảm ơn của Thư viện Thiếu nhi Hartwell gửi ông Sullivan vì khoản quyên góp $5.000, dùng cho chương trình đọc sách sau giờ học phục vụ hơn 200 trẻ mỗi tuần: mua sách mới, nâng cấp phòng máy, mở rộng giờ kể chuyện cuối tuần. Sẽ ghi danh ông trên bảng nhà tài trợ và bản tin năm. Mời ông dự ngày mở cửa mùa xuân 22/4; kèm biên nhận để khai thuế.",
+      "questions": [
+        {
+          "questionText": "Why was the letter written?",
+          "options": ["To request a donation", "To thank a donor", "To announce a closure", "To apply for a grant"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "main idea",
+          "explanation": "The letter thanks Mr. Sullivan for his generous donation.",
+          "explanationVi": "Thư cảm ơn ông Sullivan vì khoản quyên góp hào phóng."
+        },
+        {
+          "questionText": "How will the donation be used?",
+          "options": ["To pay staff salaries", "To support the reading program", "To build a new library", "To fund a scholarship"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The donation will support the after-school reading program.",
+          "explanationVi": "Khoản quyên góp sẽ hỗ trợ chương trình đọc sách sau giờ học."
+        },
+        {
+          "questionText": "What is enclosed with the letter?",
+          "options": ["A newsletter", "A book", "A receipt for tax records", "An invitation card only"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "An official receipt for tax records is enclosed.",
+          "explanationVi": "Thư có kèm một biên nhận chính thức để khai thuế."
+        },
+        {
+          "questionText": "What is Mr. Sullivan invited to attend?",
+          "options": ["A book sale", "A spring open house", "A board meeting", "A fundraising dinner"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "He is invited to the spring open house on April 22.",
+          "explanationVi": "Ông được mời dự ngày mở cửa mùa xuân vào 22/4."
+        }
+      ]
+    },
+    {
+      "title": "Innovation in Technology Summit — Schedule",
+      "passageType": "schedule",
+      "passageText": "Conference Schedule — Innovation in Technology Summit\nSaturday, June 14 — Grand Plaza Hotel\n\n9:00 A.M. – Registration and welcome coffee (Main Lobby)\n10:00 A.M. – Keynote: The Future of Artificial Intelligence (Hall A)\n11:30 A.M. – Panel Discussion: Cybersecurity Trends (Hall B)\n12:30 P.M. – Networking Lunch (Garden Terrace)\n2:00 P.M. – Workshop: Building Mobile Apps (Room 204)\n3:30 P.M. – Workshop: Data Analytics for Beginners (Room 206)\n5:00 P.M. – Closing remarks and prize draw (Hall A)\n\nNote: Workshops have limited seats and require advance sign-up at the registration desk. Lunch is included with all full-day passes.",
+      "passageVi": "Lịch hội nghị Innovation in Technology Summit, thứ Bảy 14/6 tại khách sạn Grand Plaza: 9h đăng ký, 10h keynote về AI (Hall A), 11h30 tọa đàm an ninh mạng (Hall B), 12h30 ăn trưa giao lưu, 14h workshop làm app di động (phòng 204), 15h30 workshop phân tích dữ liệu (phòng 206), 17h bế mạc và rút thăm trúng thưởng (Hall A). Lưu ý: workshop ít chỗ, phải đăng ký trước; vé cả ngày bao gồm ăn trưa.",
+      "questions": [
+        {
+          "questionText": "Where does the keynote speech take place?",
+          "options": ["Hall A", "Hall B", "Room 204", "Garden Terrace"],
+          "correctIndex": 0,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The keynote on artificial intelligence is held in Hall A at 10:00 A.M.",
+          "explanationVi": "Bài keynote về AI diễn ra ở Hall A lúc 10h sáng."
+        },
+        {
+          "questionText": "What is required to attend the workshops?",
+          "options": ["An extra fee", "Advance sign-up", "A company badge", "A laptop"],
+          "correctIndex": 1,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Workshops have limited seats and require advance sign-up at the registration desk.",
+          "explanationVi": "Workshop ít chỗ và cần đăng ký trước tại bàn đăng ký."
+        },
+        {
+          "questionText": "What is included with a full-day pass?",
+          "options": ["A hotel room", "Transportation", "Lunch", "A free workshop book"],
+          "correctIndex": 2,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "Lunch is included with all full-day passes.",
+          "explanationVi": "Vé cả ngày đã bao gồm bữa trưa."
+        },
+        {
+          "questionText": "What is the final event of the day?",
+          "options": ["A networking lunch", "Registration", "A panel discussion", "Closing remarks and prize draw"],
+          "correctIndex": 3,
+          "category": "reading",
+          "topic": "detail",
+          "explanation": "The day ends at 5:00 P.M. with closing remarks and a prize draw.",
+          "explanationVi": "Ngày kết thúc lúc 17h với phần bế mạc và rút thăm trúng thưởng."
+        }
+      ]
+    }
+  ]
+}
