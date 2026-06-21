@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 import { listCursorModels, resolveApiKey } from "@/lib/cursor-client";
 
 export async function GET(request: NextRequest) {

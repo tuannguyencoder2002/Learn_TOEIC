@@ -73,14 +73,16 @@ function rowToQuestion(
   };
 }
 
-export async function loadQuestionDetails(
+function isMissingSchemaError(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err);
+  return msg.includes("passages") || msg.includes("part_number") || msg.includes("passage_id");
+}
+
+async function queryQuestionRows(
   client: PoolClient,
   questionIds: string[]
-): Promise<ToeicQuestion[]> {
-  if (questionIds.length === 0) return [];
-
-  const qRes = await client.query<DbQuestionRow>(
-    `SELECT q.id AS question_id, q.exercise_set_id, q.sentence, q.correct_index,
+): Promise<DbQuestionRow[]> {
+  const extended = `SELECT q.id AS question_id, q.exercise_set_id, q.sentence, q.correct_index,
             q.category, q.topic, q.explanation_en, q.explanation_vi, es.title AS set_title,
             q.part_number, q.question_text,
             p.passage_text, p.passage_vi, p.title AS passage_title, p.passage_type
@@ -88,9 +90,33 @@ export async function loadQuestionDetails(
      JOIN exercise_sets es ON es.id = q.exercise_set_id
      LEFT JOIN passages p ON p.id = q.passage_id
      WHERE q.id = ANY($1::uuid[])
-     ORDER BY array_position($1::uuid[], q.id)`,
-    [questionIds]
-  );
+     ORDER BY array_position($1::uuid[], q.id)`;
+
+  const legacy = `SELECT q.id AS question_id, q.exercise_set_id, q.sentence, q.correct_index,
+            q.category, q.topic, q.explanation_en, q.explanation_vi, es.title AS set_title,
+            es.part_number
+     FROM questions q
+     JOIN exercise_sets es ON es.id = q.exercise_set_id
+     WHERE q.id = ANY($1::uuid[])
+     ORDER BY array_position($1::uuid[], q.id)`;
+
+  try {
+    const qRes = await client.query<DbQuestionRow>(extended, [questionIds]);
+    return qRes.rows;
+  } catch (err) {
+    if (!isMissingSchemaError(err)) throw err;
+    const qRes = await client.query<DbQuestionRow>(legacy, [questionIds]);
+    return qRes.rows;
+  }
+}
+
+export async function loadQuestionDetails(
+  client: PoolClient,
+  questionIds: string[]
+): Promise<ToeicQuestion[]> {
+  if (questionIds.length === 0) return [];
+
+  const qRes = await queryQuestionRows(client, questionIds);
 
   const optRes = await client.query<{ question_id: string; option_index: number; option_text: string }>(
     `SELECT question_id, option_index, option_text
@@ -132,7 +158,7 @@ export async function loadQuestionDetails(
     vocabMap.set(v.question_id, list);
   }
 
-  return qRes.rows.map((row) =>
+  return qRes.map((row) =>
     rowToQuestion(row, optionsMap.get(row.question_id) ?? ["", "", "", ""], vocabMap.get(row.question_id) ?? [])
   );
 }
@@ -233,18 +259,32 @@ export async function getRandomQuestionIds(
   userId: string,
   limit = 60
 ): Promise<string[]> {
-  const res = await client.query<{ id: string }>(
-    `SELECT q.id
+  const extended = `SELECT q.id
      FROM questions q
      JOIN exercise_sets es ON es.id = q.exercise_set_id
      WHERE q.is_active = TRUE
-       AND q.part_number = 5
+       AND COALESCE(q.part_number, es.part_number) = 5
        AND (es.user_id = $1 OR es.user_id IS NULL)
      ORDER BY RANDOM()
-     LIMIT $2`,
-    [userId, limit]
-  );
-  return res.rows.map((r) => r.id);
+     LIMIT $2`;
+
+  const legacy = `SELECT q.id
+     FROM questions q
+     JOIN exercise_sets es ON es.id = q.exercise_set_id
+     WHERE q.is_active = TRUE
+       AND es.part_number = 5
+       AND (es.user_id = $1 OR es.user_id IS NULL)
+     ORDER BY RANDOM()
+     LIMIT $2`;
+
+  try {
+    const res = await client.query<{ id: string }>(extended, [userId, limit]);
+    return res.rows.map((r) => r.id);
+  } catch (err) {
+    if (!isMissingSchemaError(err)) throw err;
+    const res = await client.query<{ id: string }>(legacy, [userId, limit]);
+    return res.rows.map((r) => r.id);
+  }
 }
 
 /**
@@ -262,36 +302,64 @@ export async function getQuestionIdsByPart(
       ? "ORDER BY RANDOM()"
       : "ORDER BY p.sort_order NULLS FIRST, q.sort_order";
 
-  const res = await client.query<{ id: string }>(
-    `SELECT q.id
+  const extended = `SELECT q.id
      FROM questions q
      JOIN exercise_sets es ON es.id = q.exercise_set_id
      LEFT JOIN passages p ON p.id = q.passage_id
      WHERE q.is_active = TRUE
-       AND q.part_number = $2
+       AND COALESCE(q.part_number, es.part_number) = $2
        AND (es.user_id = $1 OR es.user_id IS NULL)
      ${order}
-     LIMIT $3`,
-    [userId, part, limit]
-  );
-  return res.rows.map((r) => r.id);
+     LIMIT $3`;
+
+  const legacy = `SELECT q.id
+     FROM questions q
+     JOIN exercise_sets es ON es.id = q.exercise_set_id
+     WHERE q.is_active = TRUE
+       AND es.part_number = $2
+       AND (es.user_id = $1 OR es.user_id IS NULL)
+     ${part === 5 ? "ORDER BY RANDOM()" : "ORDER BY q.sort_order"}
+     LIMIT $3`;
+
+  try {
+    const res = await client.query<{ id: string }>(extended, [userId, part, limit]);
+    return res.rows.map((r) => r.id);
+  } catch (err) {
+    if (!isMissingSchemaError(err)) throw err;
+    const res = await client.query<{ id: string }>(legacy, [userId, part, limit]);
+    return res.rows.map((r) => r.id);
+  }
 }
 
 export async function countQuestionsByPart(
   client: PoolClient,
   userId: string
 ): Promise<Record<number, number>> {
-  const res = await client.query<{ part_number: number; n: string }>(
-    `SELECT q.part_number, COUNT(*)::text AS n
+  const extended = `SELECT COALESCE(q.part_number, es.part_number) AS part_number, COUNT(*)::text AS n
      FROM questions q
      JOIN exercise_sets es ON es.id = q.exercise_set_id
      WHERE q.is_active = TRUE
        AND (es.user_id = $1 OR es.user_id IS NULL)
-     GROUP BY q.part_number`,
-    [userId]
-  );
+     GROUP BY COALESCE(q.part_number, es.part_number)`;
+
+  const legacy = `SELECT es.part_number, COUNT(*)::text AS n
+     FROM questions q
+     JOIN exercise_sets es ON es.id = q.exercise_set_id
+     WHERE q.is_active = TRUE
+       AND (es.user_id = $1 OR es.user_id IS NULL)
+     GROUP BY es.part_number`;
+
+  let rows: { part_number: number; n: string }[];
+  try {
+    const res = await client.query<{ part_number: number; n: string }>(extended, [userId]);
+    rows = res.rows;
+  } catch (err) {
+    if (!isMissingSchemaError(err)) throw err;
+    const res = await client.query<{ part_number: number; n: string }>(legacy, [userId]);
+    rows = res.rows;
+  }
   const out: Record<number, number> = {};
-  for (const r of res.rows) out[Number(r.part_number)] = parseInt(r.n, 10);
+  for (const r of rows) out[Number(r.part_number)] = parseInt(r.n, 10);
   return out;
 }
 
@@ -299,16 +367,28 @@ export async function countUserQuestions(
   client: PoolClient,
   userId: string
 ): Promise<number> {
-  const res = await client.query<{ count: string }>(
-    `SELECT COUNT(*)::text AS count
+  const extended = `SELECT COUNT(*)::text AS count
      FROM questions q
      JOIN exercise_sets es ON es.id = q.exercise_set_id
      WHERE q.is_active = TRUE
-       AND q.part_number = 5
-       AND (es.user_id = $1 OR es.user_id IS NULL)`,
-    [userId]
-  );
-  return parseInt(res.rows[0]?.count ?? "0", 10);
+       AND COALESCE(q.part_number, es.part_number) = 5
+       AND (es.user_id = $1 OR es.user_id IS NULL)`;
+
+  const legacy = `SELECT COUNT(*)::text AS count
+     FROM questions q
+     JOIN exercise_sets es ON es.id = q.exercise_set_id
+     WHERE q.is_active = TRUE
+       AND es.part_number = 5
+       AND (es.user_id = $1 OR es.user_id IS NULL)`;
+
+  try {
+    const res = await client.query<{ count: string }>(extended, [userId]);
+    return parseInt(res.rows[0]?.count ?? "0", 10);
+  } catch (err) {
+    if (!isMissingSchemaError(err)) throw err;
+    const res = await client.query<{ count: string }>(legacy, [userId]);
+    return parseInt(res.rows[0]?.count ?? "0", 10);
+  }
 }
 
 export async function getDueQuestionIds(

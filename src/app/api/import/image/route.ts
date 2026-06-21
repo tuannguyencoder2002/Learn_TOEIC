@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 import { mkdir, writeFile } from "fs/promises";
 import path from "path";
 import { generateWithCursor, resolveApiKey } from "@/lib/cursor-client";
@@ -14,16 +14,16 @@ const UPLOAD_DIR = path.join(process.cwd(), "uploads");
 function parseQuestions(raw: unknown): ParsedQuestionInput[] {
   const data = raw as Record<string, unknown>;
   const questions = data.questions;
-  if (!Array.isArray(questions)) throw new Error("AI không trả về questions");
+  if (!Array.isArray(questions)) throw new Error("AI khĂ´ng tráº£ vá» questions");
 
   return questions.map((q: Record<string, unknown>, i: number) => {
     const options = q.options as string[];
     if (!Array.isArray(options) || options.length !== 4) {
-      throw new Error(`Câu ${i + 1}: cần 4 đáp án`);
+      throw new Error(`CĂ¢u ${i + 1}: cáº§n 4 Ä‘Ă¡p Ă¡n`);
     }
     const correctIndex = Number(q.correctIndex);
     if (!Number.isInteger(correctIndex) || correctIndex < 0 || correctIndex > 3) {
-      throw new Error(`Câu ${i + 1}: correctIndex không hợp lệ`);
+      throw new Error(`CĂ¢u ${i + 1}: correctIndex khĂ´ng há»£p lá»‡`);
     }
 
     return normalizeParsedQuestion({
@@ -74,10 +74,10 @@ export async function POST(request: NextRequest) {
       (formData.get("modelId") as string) ||
       process.env.CURSOR_MODEL ||
       "auto";
-    const title = (formData.get("title") as string) || "Bài import từ ảnh";
+    const title = (formData.get("title") as string) || "BĂ i import tá»« áº£nh";
 
     if (!files.length) {
-      return NextResponse.json({ error: "Thiếu file ảnh" }, { status: 400 });
+      return NextResponse.json({ error: "Thiáº¿u file áº£nh" }, { status: 400 });
     }
 
     await mkdir(UPLOAD_DIR, { recursive: true });

@@ -29,8 +29,9 @@ function loadDatabaseUrl() {
 
 // Tim thu muc bin cua PostgreSQL (chua psql/pg_dump/pg_restore)
 function findPgBinDir() {
-  if (process.env.PSQL_PATH && fs.existsSync(process.env.PSQL_PATH)) {
-    return path.dirname(process.env.PSQL_PATH);
+  const psqlPath = readEnvVar("PSQL_PATH");
+  if (psqlPath && fs.existsSync(psqlPath)) {
+    return path.dirname(psqlPath);
   }
   try {
     const out = execSync("where psql", { encoding: "utf8", stdio: ["pipe", "pipe", "ignore"] });
@@ -39,7 +40,7 @@ function findPgBinDir() {
   } catch {
     // fall through
   }
-  for (const ver of ["17", "16", "15", "14"]) {
+  for (const ver of ["15", "14", "16", "17"]) {
     const dir = `C:\\Program Files\\PostgreSQL\\${ver}\\bin`;
     if (fs.existsSync(path.join(dir, "psql.exe"))) return dir;
   }

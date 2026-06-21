@@ -26,7 +26,13 @@ export default function SettingsPage() {
     setTestResult(null);
     try {
       const res = await fetch("/api/models", { headers: getApiHeaders(key) });
-      const data = await res.json();
+      const text = await res.text();
+      let data: { error?: string; models?: CursorModel[] };
+      try {
+        data = JSON.parse(text);
+      } catch {
+        throw new Error("API không phản hồi JSON — thử khởi động lại app (start.bat)");
+      }
       if (!res.ok) throw new Error(data.error || "Không tải được model");
       setModels(data.models ?? []);
       setTestResult(`Kết nối OK · ${data.models?.length ?? 0} model`);

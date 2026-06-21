@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 import { clampPracticeCount, PRACTICE_SESSION } from "@/lib/practice-config";
 import { generateWithCursor, resolveApiKey } from "@/lib/cursor-client";
 import { buildGeneratePrompt } from "@/lib/prompts";import type {
@@ -18,17 +18,17 @@ const VALID_CATEGORIES = new Set<QuestionCategory>([
 function normalizeQuestion(raw: Record<string, unknown>, index: number): ToeicQuestion {
   const options = raw.options as string[];
   if (!Array.isArray(options) || options.length !== 4) {
-    throw new Error(`Câu ${index + 1}: cần đúng 4 đáp án`);
+    throw new Error(`CĂ¢u ${index + 1}: cáº§n Ä‘Ăºng 4 Ä‘Ă¡p Ă¡n`);
   }
 
   const correctIndex = Number(raw.correctIndex);
   if (!Number.isInteger(correctIndex) || correctIndex < 0 || correctIndex > 3) {
-    throw new Error(`Câu ${index + 1}: correctIndex phải từ 0-3`);
+    throw new Error(`CĂ¢u ${index + 1}: correctIndex pháº£i tá»« 0-3`);
   }
 
   const category = raw.category as QuestionCategory;
   if (!VALID_CATEGORIES.has(category)) {
-    throw new Error(`Câu ${index + 1}: category không hợp lệ`);
+    throw new Error(`CĂ¢u ${index + 1}: category khĂ´ng há»£p lá»‡`);
   }
 
   const vocabulary = Array.isArray(raw.vocabulary)
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
     const total = clampPracticeCount(body.count ?? PRACTICE_SESSION.default);
     const chunkSize = PRACTICE_SESSION.aiChunkSize;
     const allQuestions: ToeicQuestion[] = [];
-    let title = "Đề Part 5 do AI tạo";
+    let title = "Äá» Part 5 do AI táº¡o";
 
     const chunks = Math.ceil(total / chunkSize);
     for (let i = 0; i < chunks; i++) {
@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
       const rawQuestions = parsed.questions;
       if (!Array.isArray(rawQuestions) || rawQuestions.length === 0) {
         if (allQuestions.length === 0) {
-          throw new Error("AI không trả về câu hỏi nào");
+          throw new Error("AI khĂ´ng tráº£ vá» cĂ¢u há»i nĂ o");
         }
         break;
       }
@@ -106,7 +106,7 @@ export async function POST(request: NextRequest) {
 
     const quiz: QuizSet = {
       id: `ai-${Date.now()}`,
-      title: `${title} (${questions.length} câu)`,
+      title: `${title} (${questions.length} cĂ¢u)`,
       source: "ai",
       createdAt: new Date().toISOString(),
       questions,
