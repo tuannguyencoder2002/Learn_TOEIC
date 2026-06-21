@@ -34,6 +34,9 @@ yarn-error.log*
 
 # uploads & local media (không public — bản quyền)
 /uploads
+# DB snapshot khi dong bo (db-sync.bat) — chua de TOEIC, KHONG public
+/db-snapshot
+*.dump
 *.zip
 *.mov
 *.mp3

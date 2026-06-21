@@ -68,6 +68,21 @@ node scripts/seed-content.js
 Lệnh này **idempotent** — chạy lại nhiều lần không tạo trùng (Part 5 bỏ qua câu cùng nội dung,
 Part 6/7 bỏ qua đoạn văn cùng tiêu đề), nên cứ thêm đề mới rồi chạy lại để bơm vào database.
 
+## Đồng bộ toàn bộ database sang máy khác
+
+Dùng `db-sync.bat` (bật lên là có menu). Hai máy cùng trỏ tới **một thư mục chung**
+(Google Drive đã sync sẵn, hoặc ổ mạng LAN) qua biến `SYNC_DIR` trong `.env.local`:
+
+```env
+SYNC_DIR=G:\My Drive\learn-toeic-db
+```
+
+- **Máy nguồn** → mở `db-sync.bat` → `[1] EXPORT`: dump toàn bộ DB ra `SYNC_DIR`.
+- **Máy đích** → mở `db-sync.bat` → `[2] IMPORT`: xoá DB cũ và nạp lại **y hệt** bản nguồn.
+
+Để trống `SYNC_DIR` thì dump vào `./db-snapshot` (đã được `.gitignore`, không đẩy lên repo public).
+Yêu cầu PostgreSQL có `pg_dump` / `pg_restore` (đi kèm bản cài PostgreSQL).
+
 ## Điện thoại (cùng WiFi)
 
 `start.bat` in URL dạng `http://192.168.x.x:4001` — mở trên điện thoại cùng mạng LAN.
