@@ -6,7 +6,7 @@ import { STORAGE_KEYS } from "@/lib/types";
 
 const DEFAULT_SETTINGS: AppSettings = {
   apiKey: "",
-  modelId: "auto",
+  modelId: "gpt-4o-mini",
 };
 
 export function useAppSettings() {
@@ -35,5 +35,5 @@ export function useAppSettings() {
 
 export function getApiHeaders(apiKey?: string): HeadersInit {
   if (!apiKey) return {};
-  return { "x-cursor-api-key": apiKey };
+  return { "x-openai-api-key": apiKey };
 }

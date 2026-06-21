@@ -8,7 +8,7 @@ const features = [
   },
   {
     title: "AI tạo đề mới",
-    desc: "Dùng Cursor API để sinh đề theo chủ đề, độ khó và loại câu hỏi bạn chọn.",
+    desc: "Dùng OpenAI API để sinh đề theo chủ đề, độ khó và loại câu hỏi bạn chọn.",
     href: "/practice?mode=generate",
   },
   {
@@ -31,11 +31,11 @@ export default function HomePage() {
           TOEIC Part 5
         </p>
         <h1 className="max-w-3xl text-2xl font-bold leading-tight text-brand sm:text-3xl md:text-5xl">
-          Ôn luyện Incomplete Sentences với AI Cursor
+          Ôn luyện Incomplete Sentences với OpenAI
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-brand-muted sm:mt-4 sm:text-base">
           Luyện dạng từ, ngữ pháp, từ vựng và cụm danh từ theo chuẩn TOEIC. App có sẵn
-          13 câu mẫu từ sách và có thể tạo đề mới bằng API key Cursor của bạn.
+          13 câu mẫu từ sách và có thể tạo đề mới bằng API key OpenAI của bạn.
         </p>
         <div className="mt-6 flex flex-col gap-2 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-3">
           <Link

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { generateWithCursor, resolveApiKey } from "@/lib/cursor-client";
+import { generateWithOpenAi, resolveApiKey, resolveModelId } from "@/lib/openai-client";
 import { query } from "@/lib/db";
 import { readJsonBody } from "@/lib/request-body";
 
@@ -26,22 +26,23 @@ export async function POST(request: NextRequest) {
 
     let apiKey: string;
     try {
-      apiKey = resolveApiKey(request.headers.get("x-cursor-api-key"));
+      apiKey = resolveApiKey(
+        request.headers.get("x-openai-api-key") ||
+          request.headers.get("x-cursor-api-key")
+      );
     } catch {
       return NextResponse.json(
-        { ok: false, error: "Chưa có Cursor API key — tự nhập nghĩa giúp nhé." },
+        { ok: false, error: "Chưa có OpenAI API key — tự nhập nghĩa giúp nhé." },
         { status: 200 }
       );
     }
 
-    const modelId = process.env.CURSOR_MODEL || "auto";
-    const mode = (process.env.CURSOR_AGENT_MODE as "local" | "cloud" | "auto") || "auto";
+    const modelId = resolveModelId(undefined);
 
-    const parsed = (await generateWithCursor(
+    const parsed = (await generateWithOpenAi(
       buildPrompt(word, body.context ? String(body.context) : undefined),
       apiKey,
-      modelId,
-      mode
+      modelId
     )) as Record<string, unknown>;
 
     const meaning = String(parsed.meaning ?? "").trim();

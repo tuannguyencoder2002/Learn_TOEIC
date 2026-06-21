@@ -8,6 +8,12 @@ import type { CursorModel } from "./types";
 
 const CURSOR_API_BASE = "https://api.cursor.com";
 
+export function resolveAgentMode(): "local" | "cloud" | "auto" {
+  const mode = process.env.CURSOR_AGENT_MODE?.trim();
+  if (mode === "local" || mode === "cloud" || mode === "auto") return mode;
+  return "local";
+}
+
 export function resolveApiKey(headerKey?: string | null): string {
   const key = headerKey?.trim() || process.env.CURSOR_API_KEY?.trim();
   if (!key) {
@@ -52,6 +58,33 @@ function isStorageModeError(err: unknown): boolean {
   );
 }
 
+function isCloudEnvironmentError(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err);
+  return (
+    msg.includes("environment_public_id") ||
+    msg.includes("environment is invalid")
+  );
+}
+
+function cloudEnvironmentHelpError(): Error {
+  return new Error(
+    "Cloud Agent chưa được cấu hình cho tài khoản này.\n" +
+      "Cách xử lý (chọn một):\n" +
+      "1) Dùng Local Agent: cài Cursor Desktop trên máy, thêm CURSOR_AGENT_MODE=local vào .env.local rồi khởi động lại app.\n" +
+      "2) Hoặc cấu hình Cloud Agent tại cursor.com/dashboard/cloud-agents (gắn GitHub repo).\n" +
+      "Tạo đề Part 5 không cần Cloud — Local Agent là đủ."
+  );
+}
+
+function localAgentHelpError(cause?: unknown): Error {
+  const detail = cause instanceof Error ? cause.message : "";
+  return new Error(
+    "Local Agent không chạy được trên máy này.\n" +
+      "Cài Cursor Desktop (cursor.com/download), mở app ít nhất một lần, rồi đặt CURSOR_AGENT_MODE=local trong .env.local.\n" +
+      (detail ? `Chi tiết: ${detail}` : "")
+  );
+}
+
 function storageModeHelpError(): Error {
   return new Error(
     "Cursor Cloud Agent chưa bật Storage. Cách xử lý:\n" +
@@ -71,6 +104,13 @@ function parseCursorApiError(status: number, errText: string): Error {
 
     if (code === "feature_unavailable" && message.includes("Storage mode")) {
       return storageModeHelpError();
+    }
+
+    if (
+      code === "validation_error" &&
+      message.includes("environment_public_id")
+    ) {
+      return cloudEnvironmentHelpError();
     }
 
     if (status === 403) {
@@ -319,6 +359,10 @@ async function promptWithImages(
         throw storageModeHelpError();
       }
 
+      if (isCloudEnvironmentError(cloudErr)) {
+        throw cloudEnvironmentHelpError();
+      }
+
       throw localErr instanceof Error ? localErr : cloudErr;
     }
   }
@@ -366,8 +410,8 @@ export async function generateWithCursor(
   } else {
     try {
       text = await promptWithLocalAgentFast(prompt, apiKey, modelId);
-    } catch {
-      text = await promptWithCloudAgent(prompt, apiKey, modelId);
+    } catch (localErr) {
+      throw localAgentHelpError(localErr);
     }
   }
 

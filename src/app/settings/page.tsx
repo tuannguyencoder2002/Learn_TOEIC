@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { ModelSelector } from "@/components/ModelSelector";
 import { getApiHeaders, useAppSettings } from "@/hooks/useAppSettings";
 import type { CursorModel } from "@/lib/types";
@@ -8,7 +8,7 @@ import type { CursorModel } from "@/lib/types";
 export default function SettingsPage() {
   const { settings, saveSettings, loaded } = useAppSettings();
   const [apiKey, setApiKey] = useState("");
-  const [modelId, setModelId] = useState("auto");
+  const [modelId, setModelId] = useState("gpt-4o-mini");
   const [models, setModels] = useState<CursorModel[]>([]);
   const [loadingModels, setLoadingModels] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -17,7 +17,7 @@ export default function SettingsPage() {
   useEffect(() => {
     if (!loaded) return;
     setApiKey(settings.apiKey);
-    setModelId(settings.modelId);
+    setModelId(settings.modelId === "auto" ? "gpt-4o-mini" : settings.modelId);
   }, [loaded, settings]);
 
   const loadModels = async (key: string) => {
@@ -56,7 +56,7 @@ export default function SettingsPage() {
     <div className="mx-auto max-w-2xl space-y-6">
       <div>
         <p className="text-sm text-accent">Cấu hình</p>
-        <h1 className="text-xl font-bold text-brand sm:text-2xl">Cursor API & Model</h1>
+        <h1 className="text-xl font-bold text-brand sm:text-2xl">OpenAI API & Model</h1>
         <p className="mt-2 text-sm text-brand-muted">
           API key được lưu trên trình duyệt (localStorage). Không commit vào git.
         </p>
@@ -64,24 +64,26 @@ export default function SettingsPage() {
 
       <section className="space-y-4 rounded-2xl border border-border bg-white p-4 shadow-sm sm:p-6">
         <label className="block space-y-2">
-          <span className="text-sm font-medium text-brand">Cursor API Key</span>
+          <span className="text-sm font-medium text-brand">OpenAI API Key</span>
           <input
             type="password"
             value={apiKey}
             onChange={(e) => setApiKey(e.target.value)}
-            placeholder="crsr_..."
+            placeholder="sk-proj-..."
             className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm outline-none ring-accent/20 focus:ring-2"
           />
           <p className="text-xs text-brand-muted">
             Lấy key tại{" "}
             <a
-              href="https://cursor.com/dashboard/integrations"
+              href="https://platform.openai.com/api-keys"
               target="_blank"
               rel="noreferrer"
               className="text-accent underline"
             >
-              Cursor Dashboard → Integrations
+              OpenAI Platform → API keys
             </a>
+            . Hoặc đặt <code className="text-xs">OPENAI_API_KEY</code> trong{" "}
+            <code className="text-xs">.env.local</code>.
           </p>
         </label>
 
@@ -118,27 +120,16 @@ export default function SettingsPage() {
       </section>
 
       <section className="rounded-2xl border border-accent/20 bg-accent/5 p-4 sm:p-5">
-        <h2 className="font-semibold text-brand">Import ảnh & Cloud Agent</h2>
+        <h2 className="font-semibold text-brand">Model gợi ý</h2>
         <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-brand-muted">
           <li>
-            Import ảnh ưu tiên <strong>Local Agent</strong> (Cursor trên máy bạn) — không cần bật
-            Cloud Storage.
+            <strong>gpt-4o-mini</strong> — nhanh, rẻ, phù hợp tạo đề và dịch từ vựng.
           </li>
           <li>
-            Nếu gặp lỗi &quot;Storage mode is disabled&quot;: vào{" "}
-            <a
-              href="https://cursor.com/settings"
-              target="_blank"
-              rel="noreferrer"
-              className="text-accent underline"
-            >
-              cursor.com/settings
-            </a>{" "}
-            → General → chọn <strong>Privacy Mode</strong> (không dùng Legacy/Ghost).
+            <strong>gpt-4o</strong> — chất lượng cao hơn, phù hợp import ảnh phức tạp.
           </li>
           <li>
-            Trong <code className="text-xs">.env.local</code> đặt{" "}
-            <code className="text-xs">CURSOR_AGENT_MODE=local</code> nếu chỉ muốn chạy local.
+            Import ảnh dùng vision — cần model hỗ trợ hình ảnh (gpt-4o, gpt-4o-mini).
           </li>
         </ul>
       </section>
@@ -147,7 +138,7 @@ export default function SettingsPage() {
         <h2 className="font-semibold text-amber-900">Lưu ý bảo mật</h2>
         <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-amber-800/90">
           <li>Không chia sẻ API key công khai (chat, screenshot, GitHub).</li>
-          <li>Nếu key đã lộ, hãy revoke và tạo key mới trên Cursor Dashboard.</li>
+          <li>Nếu key đã lộ, hãy revoke và tạo key mới trên OpenAI Platform.</li>
           <li>Key lưu localStorage chỉ dùng cho app cá nhân trên máy bạn.</li>
         </ul>
       </section>

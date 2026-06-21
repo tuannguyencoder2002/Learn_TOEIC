@@ -1,7 +1,7 @@
 ﻿import { NextRequest, NextResponse } from "next/server";
 import { mkdir, writeFile } from "fs/promises";
 import path from "path";
-import { generateWithCursor, resolveApiKey } from "@/lib/cursor-client";
+import { generateWithOpenAi, resolveApiKey, resolveModelId } from "@/lib/openai-client";
 import { getDefaultUserId, withTransaction } from "@/lib/db";
 import { normalizeParsedQuestion, toImportDisplay } from "@/lib/import-display";
 import { buildImageExtractPrompt } from "@/lib/prompts-image";
@@ -68,13 +68,12 @@ export async function POST(request: NextRequest) {
     const formData = await request.formData();
     const files = collectImageFiles(formData);
     const apiKey = resolveApiKey(
-      (formData.get("apiKey") as string) || request.headers.get("x-cursor-api-key")
+      (formData.get("apiKey") as string) ||
+        request.headers.get("x-openai-api-key") ||
+        request.headers.get("x-cursor-api-key")
     );
-    const modelId =
-      (formData.get("modelId") as string) ||
-      process.env.CURSOR_MODEL ||
-      "auto";
-    const title = (formData.get("title") as string) || "BĂ i import tá»« áº£nh";
+    const modelId = resolveModelId((formData.get("modelId") as string) || undefined);
+    const title = (formData.get("title") as string) || "Bài import từ ảnh";
 
     if (!files.length) {
       return NextResponse.json({ error: "Thiáº¿u file áº£nh" }, { status: 400 });
@@ -99,14 +98,11 @@ export async function POST(request: NextRequest) {
     }));
 
     const prompt = buildImageExtractPrompt(files.length);
-    const mode =
-      (process.env.CURSOR_AGENT_MODE as "local" | "cloud" | "auto") || "auto";
 
-    const parsed = (await generateWithCursor(
+    const parsed = (await generateWithOpenAi(
       prompt,
       apiKey,
       modelId,
-      mode,
       images,
     )) as Record<string, unknown>;
 

@@ -28,7 +28,7 @@ function sourceLabel(source: QuizSet["source"]) {
     case "seed":
       return "Sách mẫu";
     case "ai":
-      return "AI Cursor";
+      return "AI OpenAI";
     case "db":
       return "Database";
     case "mixed":
@@ -150,7 +150,7 @@ function PracticeContent() {
 
   const handleGenerate = async () => {
     if (!settings.apiKey) {
-      setError("Vui lòng nhập Cursor API key trong Cài đặt trước.");
+      setError("Vui lòng nhập OpenAI API key trong Cài đặt trước.");
       return;
     }
 
@@ -380,7 +380,7 @@ function PracticeContent() {
               <a href="/settings" className="underline">
                 Cài đặt
               </a>{" "}
-              để thêm Cursor API key.
+              để thêm OpenAI API key.
             </p>
           )}
 

@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Learn TOEIC - Part 5 Practice",
-  description: "Ôn luyện TOEIC Part 5 với AI Cursor - dạng từ, ngữ pháp, từ vựng",
+  description: "Ôn luyện TOEIC Part 5 với OpenAI - dạng từ, ngữ pháp, từ vựng",
 };
 
 export const viewport: Viewport = {
