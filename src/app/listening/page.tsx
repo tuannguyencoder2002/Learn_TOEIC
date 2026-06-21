@@ -2,13 +2,14 @@
 
 import { useMemo, useState } from "react";
 import { ListeningPart1Card } from "@/components/ListeningPart1Card";
+import { ListeningFocus } from "@/components/ListeningFocus";
 import { OFFICIAL_LISTENING_RESOURCES } from "@/lib/listening-resources";
 import { PART1_SEED } from "@/lib/listening-part1-seed";
 
-type Tab = "links" | "part1";
+type Tab = "focus" | "links" | "part1";
 
 export default function ListeningPage() {
-  const [tab, setTab] = useState<Tab>("links");
+  const [tab, setTab] = useState<Tab>("focus");
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
@@ -47,6 +48,15 @@ export default function ListeningPage() {
       <div className="flex gap-2 rounded-xl border border-border bg-surface p-1">
         <button
           type="button"
+          onClick={() => setTab("focus")}
+          className={`touch-target flex-1 rounded-lg px-3 py-2.5 text-sm font-medium transition ${
+            tab === "focus" ? "bg-brand text-white" : "text-brand-muted hover:text-brand"
+          }`}
+        >
+          🎯 Trọng tâm
+        </button>
+        <button
+          type="button"
           onClick={() => setTab("links")}
           className={`touch-target flex-1 rounded-lg px-3 py-2.5 text-sm font-medium transition ${
             tab === "links" ? "bg-brand text-white" : "text-brand-muted hover:text-brand"
@@ -64,6 +74,8 @@ export default function ListeningPage() {
           🖼️ Part 1 mẫu
         </button>
       </div>
+
+      {tab === "focus" && <ListeningFocus />}
 
       {tab === "links" && (
         <div className="space-y-4">
