@@ -2,6 +2,8 @@
 import { clampPracticeCount, PRACTICE_SESSION } from "@/lib/practice-config";
 import { generateWithOpenAi, resolveApiKey, resolveModelId } from "@/lib/openai-client";
 import { buildGeneratePrompt } from "@/lib/prompts";
+import { getDefaultUserId, withTransaction } from "@/lib/db";
+import { saveExerciseSet } from "@/lib/repositories/questions";
 import type {
   GenerateQuizRequest,
   QuestionCategory,
@@ -115,7 +117,35 @@ export async function POST(request: NextRequest) {
       questions,
     };
 
-    return NextResponse.json({ quiz });
+    // Lưu đề vào database để hiện trong tab "Đề" (best-effort, không chặn nếu lỗi).
+    let savedSetId: string | null = null;
+    try {
+      savedSetId = await withTransaction(async (client) => {
+        const userId = await getDefaultUserId(client);
+        const { setId } = await saveExerciseSet(client, userId, {
+          title: quiz.title,
+          sourceType: "ai_generate",
+          category:
+            body.category && body.category !== "mixed" ? body.category : undefined,
+          difficulty: body.difficulty,
+          questions: questions.map((q) => ({
+            sentence: q.sentence,
+            options: q.options,
+            correctIndex: q.correctIndex,
+            category: q.category,
+            topic: q.topic,
+            explanation: q.explanation,
+            explanationVi: q.explanationVi,
+            vocabulary: q.vocabulary,
+          })),
+        });
+        return setId;
+      });
+    } catch {
+      // Bỏ qua lỗi lưu DB — vẫn trả đề cho người dùng luyện ngay.
+    }
+
+    return NextResponse.json({ quiz, savedSetId });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json({ error: message }, { status: 500 });

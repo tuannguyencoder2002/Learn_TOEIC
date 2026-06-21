@@ -83,6 +83,23 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(result);
     }
 
+    if (action === "set") {
+      const setId = searchParams.get("id");
+      if (!setId) {
+        return NextResponse.json({ error: "Thiếu id đề" }, { status: 400 });
+      }
+      const result = await withTransaction(async (client) => {
+        const questionIds = await getSetQuestionIds(client, setId);
+        const questions = await loadQuestionDetails(client, questionIds);
+        const meta = await client.query<{ title: string; part_number: number }>(
+          `SELECT title, part_number FROM exercise_sets WHERE id = $1`,
+          [setId]
+        );
+        return { questions, set: meta.rows[0] ?? null };
+      });
+      return NextResponse.json(result);
+    }
+
     return NextResponse.json({ error: "Unknown action" }, { status: 400 });  } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json({ error: message }, { status: 500 });

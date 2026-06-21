@@ -97,6 +97,35 @@ function PracticeContent() {
       .catch(() => undefined);
   }, []);
 
+  // Mở 1 đề cụ thể từ tab "Đề": /practice?set=<id>
+  useEffect(() => {
+    const setId = searchParams.get("set");
+    if (!setId) return;
+    setError(null);
+    fetch(`/api/practice?action=set&id=${setId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        const qs = (data.questions ?? []) as ToeicQuestion[];
+        if (qs.length === 0) {
+          setError("Đề này chưa có câu hỏi.");
+          return;
+        }
+        setQuiz({
+          id: `set-${setId}`,
+          title: data.set?.title ?? "Đề đã chọn",
+          source: "db",
+          createdAt: new Date().toISOString(),
+          questions: qs,
+        });
+        setCurrentIndex(0);
+        setAnswers({});
+        setShowResult(false);
+        setShowSummary(false);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      })
+      .catch(() => setError("Không tải được đề đã chọn"));
+  }, [searchParams]);
+
   useEffect(() => {
     if (!loaded || !settings.apiKey) return;
 

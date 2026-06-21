@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 const desktopLinks = [
   { href: "/", label: "Trang chủ" },
   { href: "/practice", label: "Luyện Part 5" },
+  { href: "/exams", label: "Đề" },
   { href: "/listening", label: "Listening" },
   { href: "/review", label: "Ôn lại" },
   { href: "/import", label: "Import ảnh" },
@@ -16,6 +17,7 @@ const desktopLinks = [
 const mobileTabs = [
   { href: "/", label: "Trang chủ", icon: "🏠" },
   { href: "/practice", label: "Luyện", icon: "✏️" },
+  { href: "/exams", label: "Đề", icon: "📋" },
   { href: "/review", label: "Ôn", icon: "🔁" },
   { href: "/import", label: "Import", icon: "📷" },
   { href: "/vocabulary", label: "Từ vựng", icon: "📚" },
@@ -84,7 +86,7 @@ export function AppHeader() {
         style={{ paddingBottom: "var(--safe-bottom)" }}
         aria-label="Điều hướng chính"
       >
-        <div className="mx-auto grid max-w-lg grid-cols-5">
+        <div className="mx-auto grid max-w-lg grid-cols-6">
           {mobileTabs.map((link) => {
             const active = isActive(pathname, link.href);
             return (

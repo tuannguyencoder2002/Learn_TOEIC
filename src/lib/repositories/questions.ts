@@ -438,10 +438,11 @@ export async function listExerciseSets(client: PoolClient, userId: string) {
     title: string;
     source_type: string;
     category: string | null;
+    part_number: number;
     question_count: number;
     created_at: string;
   }>(
-    `SELECT id, title, source_type, category, question_count, created_at
+    `SELECT id, title, source_type, category, part_number, question_count, created_at
      FROM exercise_sets
      WHERE user_id = $1 OR user_id IS NULL
      ORDER BY created_at DESC`,
